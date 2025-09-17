@@ -1,4 +1,20 @@
- :root{
+ :root {
     --text-blue: #0D4582;
-    
+    --light-blue: #318BCA;
+
+ }
+
+ /* BackGround Colors  Css*/
+ .bg-gradient {
+ background: linear-gradient(to bottom, #0D4582, #ffffff); 
+  /* background: linear-gradient(to bottom, 
+    #0D4582 0%,   
+    #0D4582 20%,  
+    #ffffff 100%   
+  ); */
+
+ }
+
+ .bg-blue{
+   background-color: var(--text-blue);
  }
