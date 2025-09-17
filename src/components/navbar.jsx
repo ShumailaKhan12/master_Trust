@@ -98,8 +98,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="w-full bg-white border-b shadow-sm px-6 py-2 flex items-center fixed z-10">
-
+            <nav className="w-full bg-white border-b shadow-sm px-6 py-2 flex items-center fixed z-60">
                 {/* Left Section - NIFTY & SENSEX */}
                 <div className="flex items-center space-x-6">
                     <div className="hidden md:flex items-center space-x-8 text-sm">
