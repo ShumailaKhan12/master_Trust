@@ -40,7 +40,7 @@ const Sidebar = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className={`fixed lg:static inset-y-0 left-0 z-50 w-80 bg-white border-r border-gray-200 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
+      className={`fixed lg:static inset-y-0  z-50 pt-16 w-110 bg-white border border-gray-200 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0`}
     >
       <div className="h-full flex flex-col">
@@ -48,8 +48,7 @@ const Sidebar = ({ isOpen, onClose }) => {
         {/* Sticky Top Section */}
         <div className="sticky top-0 bg-white z-10">
 
-          {/* Pagination (only 1 & 2 fixed) */}
-        
+  
           {/* Pagination (only 1 & 2 fixed) */}
           <div className="px-4 pt-4 border-b border-gray-200">
             <div className="flex items-end justify-between">
@@ -77,7 +76,7 @@ const Sidebar = ({ isOpen, onClose }) => {
           </div>
 
           {/* Search Bar */}
-          <div className="p-3 flex align-center space-x-2">
+          <div className="p-3 flex align-center space-x-2 w-full">
             <div className="relative">
               <Search
                 className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
@@ -86,7 +85,7 @@ const Sidebar = ({ isOpen, onClose }) => {
               <input
                 type="text"
                 placeholder="Search & add"
-                className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className=" pl-10 w-80 pr-10 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
 
             </div>
