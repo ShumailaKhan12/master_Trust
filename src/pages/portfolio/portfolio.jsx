@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../components/navbar";
+// import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 
 const Portfolio = () => {
@@ -32,7 +32,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="grid grid-cols-3 grid-rows-1 gap-4">
         <Sidebar />
