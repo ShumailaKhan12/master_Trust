@@ -11,6 +11,7 @@ import Button from '../../../components/button';
 
 // Import Images
 import Logo from "../../../assets/Images/master-logo.png";
+import { NavLink } from 'react-router-dom';
 
 
 const Login = () => {
@@ -110,6 +111,15 @@ const Login = () => {
                         className="w-full py-2 rounded-lg bg-blue text-white font-semibold transition mt-8"
                         hoverClass="bg-white/40"
                     />
+                    <p className="text-center text-sm mt-3 mb-0">
+                        Not an existing user?{' '}
+                        <NavLink
+                            to="/register"
+                            className="text-blue text-sm text-decoration-none"
+                        >
+                            Register Now
+                        </NavLink>
+                    </p>
                 </form>
             </div>
 

@@ -18,3 +18,8 @@
  .bg-blue{
    background-color: var(--text-blue);
  }
+
+ /* text Color */
+ .text-blue{
+   color: var(--text-blue);
+ }
