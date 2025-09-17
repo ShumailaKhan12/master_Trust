@@ -85,10 +85,12 @@
 
 import React, { useState } from 'react'
 import { NavLink } from "react-router-dom";
-import { IoMenu } from 'react-icons/io5';
+import { IoBagOutline, IoMenu } from 'react-icons/io5';
 import { RxCross2 } from 'react-icons/rx';
 import MasterLogo from '../assets/Images/master-logo.png'
 import { ChevronDown } from 'lucide-react';
+import { GoHomeFill } from 'react-icons/go';
+import { MdOutlineAccountBalanceWallet } from 'react-icons/md';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -144,9 +146,9 @@ const Navbar = () => {
 
                 {/* Right Section - NavLinks end me chale gaye */}
                 <div className="hidden md:flex items-center space-x-6 ml-auto">
-                    <NavLink to="/" className={({ isActive }) => isActive ? "text-blue-600 font-medium" : "text-gray-600 hover:text-blue-600"}>Home</NavLink>
-                    <NavLink to="/portfolio" className={({ isActive }) => isActive ? "text-blue-600 font-medium" : "text-gray-600 hover:text-blue-600"}>Portfolio</NavLink>
-                    <NavLink to="/funds" className={({ isActive }) => isActive ? "text-blue-600 font-medium" : "text-gray-600 hover:text-blue-600"}>Funds</NavLink>
+                    <NavLink to="/" className={({ isActive }) => isActive ? "text-blue-600 font-medium flex items-center" : "text-gray-600 hover:text-blue-600 flex items-center"}><GoHomeFill className='me-2 text-lg' />Home</NavLink>
+                    <NavLink to="/portfolio" className={({ isActive }) => isActive ? "text-blue-600 font-medium flex items-center" : "text-gray-600 hover:text-blue-600 flex items-center"}><IoBagOutline className='me-2 text-lg' />Portfolio</NavLink>
+                    <NavLink to="/funds" className={({ isActive }) => isActive ? "text-blue-600 font-medium flex items-center" : "text-gray-600 hover:text-blue-600 flex items-center"}><MdOutlineAccountBalanceWallet className='me-2 text-lg' /> Funds</NavLink>
                     <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 text-blue-700 font-semibold cursor-pointer">
                         R
                     </div>
