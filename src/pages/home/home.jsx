@@ -55,7 +55,7 @@ const Home = () => {
             <Navbar/>
             <div className="flex bg-gray-100 ">
                 <Sidebar />
-                <div className="p-4 space-y-6 pt-18 w-full my-2">
+                <div className="p-4 space-y-6 pt-16 w-full my-2  m-0 lg:ml-110">
                     {/* Tabs */}
                     <div className=" rounded-lg">
                         <div className="flex shadow-md bg-white rounded-tl-lg rounded-tr-lg">
@@ -144,7 +144,7 @@ const Home = () => {
                                             </div>
                                         </div>
                                         <div className="">
-                                            <h3 className="text-lg font-semibold text-gray-900 mb-4">Market updates</h3>
+                                            <h3 className="text-lg font-semibold text-gray-900 mb-4 pt-4">Market updates</h3>
                                             <div className="space-y-3">
                                                 {marketUpdates.map((update, index) => (
                                                     <div key={index} className="flex items-center space-x-3 p-3 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer">
