@@ -41,8 +41,6 @@ const Home = () => {
                         <div className="p-6 shadow-md rounded-b-lg">
                             {activeTab === "Stocks" && (
                                 <>
-
-
                                     <div className='block lg:hidden'>
                                         <MobileSidebar />
                                     </div>
@@ -60,7 +58,7 @@ const Home = () => {
                                                     </div>
                                                     <span className='flex items-center'>
                                                         <p className="text-xl font-semibold text-gray-900 mb-1">{stock?.price}</p>
-                                                        <p className={`text-sm font-medium ${stock?.change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                                                        <p className={`text-sm font-medium ${stock?.change >= 0 ? 'text-green' : 'text-red'}`}>
                                                             {stock?.change >= 0 ? '+' : ''}{stock?.change} ({stock?.change >= 0 ? '+' : ''}{stock?.changePercent}%)
                                                         </p>
                                                     </span>

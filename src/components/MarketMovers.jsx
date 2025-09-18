@@ -16,7 +16,7 @@ const MarketMovers = () => {
         {/* Header */}
         <div className="p-6 border-b border-gray-200">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold text-gray-900">Market movers</h2>
+            <h2 className="text-xl font-bold text-blue">Market movers</h2>
             <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
               <TrendingUp className="w-5 h-5 text-red-500" />
             </div>
@@ -30,7 +30,7 @@ const MarketMovers = () => {
               <button
                 onClick={() => setActiveTab('Top gainers & losers')}
                 className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'Top gainers & losers'
-                  ? 'border-blue-500 text-blue-600'
+                  ? 'border-blue text-blue'
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                   }`}
               >
@@ -39,7 +39,7 @@ const MarketMovers = () => {
               <button
                 onClick={() => setActiveTab('52 weeks high & low')}
                 className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === '52 weeks high & low'
-                  ? 'border-blue-500 text-blue-600'
+                  ? 'border-blue text-blue'
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                   }`}
               >
@@ -127,7 +127,7 @@ const MarketMovers = () => {
 
         {/* View All Button */}
         <div className="mt-6 pt-4 border-t border-gray-100">
-          <NavLink to="/market" className="flex items-center space-x-1 text-blue-600 hover:text-blue-700 font-medium text-sm">
+          <NavLink to="/market" className="flex items-center space-x-1 text-blue hover:text-blue-700 font-medium text-sm">
             <span>View all</span>
             <ChevronRight className="w-4 h-4" />
           </NavLink>
