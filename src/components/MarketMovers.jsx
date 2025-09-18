@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, TrendingUp, Gift, ChevronRight } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 
 const MarketMovers = () => {
   const [selectedIndex, setSelectedIndex] = useState('Nifty 50');
@@ -153,10 +154,10 @@ const MarketMovers = () => {
 
         {/* View All Button */}
         <div className="mt-6 pt-4 border-t border-gray-100">
-          <button className="flex items-center space-x-1 text-blue-600 hover:text-blue-700 font-medium text-sm">
+          <NavLink to="/market" className="flex items-center space-x-1 text-blue-600 hover:text-blue-700 font-medium text-sm">
             <span>View all</span>
             <ChevronRight className="w-4 h-4" />
-          </button>
+          </NavLink>
         </div>
       </div>
 
