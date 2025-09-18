@@ -125,14 +125,14 @@ const MarketMovers = () => {
             </div>
           </div>
 
-          {/* View All Button */}
-          <div className="mt-6 pt-4 border-t border-gray-100">
-            <button className="flex items-center space-x-1 text-blue-600 hover:text-blue-700 font-medium text-sm">
-              <span>View all</span>
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
+        {/* View All Button */}
+        <div className="mt-6 pt-4 border-t border-gray-100">
+          <NavLink to="/market" className="flex items-center space-x-1 text-blue hover:text-blue-700 font-medium text-sm">
+            <span>View all</span>
+            <ChevronRight className="w-4 h-4" />
+          </NavLink>
         </div>
+      </div>
 
         {/* Refer and Earn Section */}
 
