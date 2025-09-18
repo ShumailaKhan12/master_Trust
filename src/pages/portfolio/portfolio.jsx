@@ -44,7 +44,7 @@ const { portfolioData } = stocks;
           <div className="mt-18 m-0 lg:ml-110 space-y-6 w-full">
             <div className="bg-white py-10 rounded-lg mx-5">
               {/* Header Section */}
-              <div className="flex items-center justify-around w-full px-4 max-w-5xl mb-10">
+              <div className="flex flex-col lg:flex-row items-center justify-around w-full px-4 max-w-5xl mb-10">
                 <div className="py-8">
                   <h2 className="text-xl font-semibold text-gray-800 lg:pt-8">
                     Ready. Set. Invest.

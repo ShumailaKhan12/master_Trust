@@ -1,28 +1,28 @@
 {
   "mostBoughtStocks": [
     {
-      "img":"../../public/Images/home/cdsl.png",
+      "img":"/images/home/cdsl.png",
       "name": "CDSL",
       "price": 3592.10,
       "change": 13.10,
       "changePercent": 0.37
     },
     {
-      "img":"../../public/Images/home/poonewala.png",
+      "img":"/images/home/poonewala.png",
       "name": "POONAWALLA",
       "price": 1947.90,
       "change": 8.40,
       "changePercent": 0.43
     },
     {
-      "img":"../../public/Images/home/GRSE.png",
+      "img":"/images/home/GRSE.png",
       "name": "GRSE",
       "price": 1523.70,
       "change": 12.40,
       "changePercent": 0.82
     },
     {
-      "img":"../../public/Images/home/TCS.webp",
+      "img":"/images/home/TCS.webp",
       "name": "TCS",
       "price": 4904.20,
       "change": 65.00,
@@ -80,36 +80,36 @@
   "investingTools": [
     {
       "name": "Screeners",
-      "icon": "../../public/images/home/setting.png"
+      "icon": "/images/home/setting.png"
     },
     {
       "name": "Results",
-      "icon": "../../public/images/home/result.png"
+      "icon": "/images/home/result.png"
     },
     {
       "name": "Superstar investors",
-      "icon": "../../public/images/home/superstar.png"
+      "icon": "/images/home/superstar.png"
     },
     {
       "name": "Trade from charts",
-      "icon": "../../public/images/home/trade-chart.png",
+      "icon": "/images/home/trade-chart.png",
       "badge": "NEW"
     }
   ],
   "researchTools": [
     {
       "name": "Investment ideas",
-      "icon": "../../public/images/home/investment.png"
+      "icon": "/images/home/investment.png"
     },
     {
       "name": "Trading calls",
-      "icon": "../../public/images/home/investment.png"
+      "icon": "/images/home/investment.png"
     }
   ],
   "marketUpdates": [
     {
       "name": "Live news",
-      "icon": "../../public/images/home/Live.png"
+      "icon": "/images/home/live.png"
     }
   ]
 }
