@@ -40,15 +40,15 @@ const Sidebar = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className={`fixed lg:static inset-y-0  z-50 pt-16 w-110 bg-white border border-gray-200 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
+      className={`fixed lg:static inset-y-0 z-50 w-110 bg-white border rounded-lg border-gray-200 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0`}
     >
       <div className="h-full flex flex-col">
 
         {/* Sticky Top Section */}
-        <div className="sticky top-0 bg-white z-10">
+        <div className="sticky top-0 bg-white rounded-lg z-10">
 
-  
+
           {/* Pagination (only 1 & 2 fixed) */}
           <div className="px-4 pt-4 border-b border-gray-200">
             <div className="flex items-end justify-between">
@@ -59,8 +59,8 @@ const Sidebar = ({ isOpen, onClose }) => {
                     key={page}
                     onClick={() => setCurrentPage(page)}
                     className={`px-2 text-sm pb-2 cursor-pointer ${currentPage === page
-                        ? "border-b-2 border-blue-600 text-blue-600 font-semibold"
-                        : "text-gray-700 font-semibold"
+                      ? "border-b-2 border-blue-600 text-blue-600 font-semibold"
+                      : "text-gray-700 font-semibold"
                       }`}
                   >
                     {page}
