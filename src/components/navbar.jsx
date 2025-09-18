@@ -4,8 +4,38 @@ import { IoBagOutline, IoMenu } from 'react-icons/io5';
 import { RxCross2 } from 'react-icons/rx';
 import MasterLogo from '../assets/Images/master-logo.png'
 import { ChevronDown, ChevronUp, LogOut, Search } from 'lucide-react';
-import { GoHomeFill } from 'react-icons/go';
+import { GoDotFill, GoHomeFill } from 'react-icons/go';
 import { MdOutlineAccountBalanceWallet } from 'react-icons/md';
+import { BsDot } from 'react-icons/bs';
+
+// Json
+const StockData = [
+    {
+        name: "NIFTY",
+        title1: "NSE",
+        title2: "NIFTY 50",
+    },
+        {
+        name: "BANKNIFTY",
+        title1: "NSE",
+        title2: "NIFTY Bank",
+    },
+        {
+        name: "FINNIFTY",
+        title1: "NSE",
+        title2: "NIFTY FINALCIAL SERVICES",
+    },
+        {
+        name: "MIDCPNIFTY",
+        title1: "NSE",
+        title2: "NIFTY MICAP SELECT",
+    },
+        {
+        name: "SENSEX",
+        title1: "BSE",
+        title2: "S&P BSE SENSEX",
+    },
+]
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -43,11 +73,11 @@ const Navbar = () => {
 
                             {/* Dropdown list */}
                             {isDropdownOpen && (
-                                <div className="absolute top-13 right-0 bg-white border border-slate-200 shadow-md rounded-md w-100 py-3 flex flex-col justify-center items-center">
+                                <div className="absolute top-13 right-0 bg-white border border-gray-300 shadow-md rounded-md w-100 py-3">
                                     {/* Search Bar */}
-                                    <div className="relative">
+                                    <div className="relative text-center">
                                         <Search
-                                            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                                            className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400"
                                             size={16}
                                         />
                                         <input
@@ -56,10 +86,15 @@ const Navbar = () => {
                                             className="pl-10 w-90 pr-10 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         />
                                     </div>
-                                    <p className='text-xs text-gray-400 pt-3 text-left'>Most pinned indices</p>
-                                    <p className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Option 1</p>
-                                    <p className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Option 2</p>
-                                    <p className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Option 3</p>
+                                    <div className='px-3'>
+                                        <p className='text-sm text-gray-400 pt-3 text-left'>Most pinned indices</p>
+                                        {StockData.map((item, index) => (
+                                            <div className='hover:bg-gray-100 border-b border-b-gray-300 py-2' key={index}>
+                                                <p className="cursor-pointer mb-0">{item.name}</p>
+                                                <p className="text-slate-500 text-xs cursor-pointer uppercase flex items-center">{item.title1}<BsDot /> {item.title2}</p>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             )}
                         </div>
@@ -104,7 +139,7 @@ const Navbar = () => {
 
 
             {isProfileOpen && (
-                <div className="fixed inset-0 flex justify-end z-50 pt-20 pr-5 sm:hidden ">
+                <div className="fixed inset-0 flex justify-end z-50 pt-20 pr-5">
                     {/* Overlay click → close */}
                     <div
                         className="absolute inset-0"
