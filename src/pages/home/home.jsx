@@ -31,7 +31,7 @@ const Home = () => {
                                 <button
                                     key={tab}
                                     onClick={() => setActiveTab(tab)}
-                                    className={`px-10 py-3 text-sm font-medium ${activeTab === tab
+                                    className={`px-15 py-3 text-sm font-medium ${activeTab === tab
                                         ? 'text-blue border-blue'
                                         : 'text-gray-600 hover:text-gray-900'
                                         }`}
@@ -44,8 +44,6 @@ const Home = () => {
                         <div className="p-6 shadow-md rounded-b-lg">
                             {activeTab === "Stocks" && (
                                 <>
-
-
                                     <div className='block lg:hidden'>
                                         <MobileSidebar />
                                     </div>
@@ -53,11 +51,14 @@ const Home = () => {
                                     <div className=" w-full"> 
                                         <h3 className="text-lg font-semibold text-gray-400 mb-2">Most bought on Kotak</h3>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
-                                            {mostBoughtStocks.map((stock, index) => (
+                                            {mostBoughtStocks?.map((stock, index) => (
                                                 <div key={index} className="p-4 border border-gray-200 bg-white rounded-lg hover:shadow-md transition-shadow cursor-pointer">
-                                                    <span className='flex items-center'>
-                                                        <h4 className="font-medium text-gray-700 mb-2">{stock.name}</h4>
-                                                    </span>
+                                                    <div className='flex'>
+                                                        <div className='bg-gray-100 rounded-full h-10 w-10 me-3 flex items-center justify-center p-1'>
+                                                            <img src={stock?.img} className='w-full h-full rounded-full' alt={stock?.name} />
+                                                        </div>
+                                                        <h4 className="font-medium text-gray-900 mb-2">{stock.name}</h4>
+                                                    </div>
                                                     <span className='flex items-center'>
                                                         <p className="text-xl font-semibold text-gray-600 mb-1">{stock.price}</p>
                                                         <p className={`text-sm font-medium ${stock.change >= 0 ? 'text-green' : 'text-red-600'}`}>

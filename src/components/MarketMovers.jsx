@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, TrendingUp, Gift, ChevronRight } from 'lucide-react';
 import marketMoversData from '../Data/marketMoversData.json'; // JSON import
+import { NavLink } from 'react-router-dom';
 
 const MarketMovers = () => {
   const [selectedIndex, setSelectedIndex] = useState('Nifty 50');
@@ -15,7 +16,7 @@ const MarketMovers = () => {
         {/* Header */}
         <div className="p-6 border-b border-gray-200">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold text-gray-900">Market movers</h2>
+            <h2 className="text-xl font-bold text-blue">Market movers</h2>
             <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
               <TrendingUp className="w-5 h-5 text-red" />
             </div>
@@ -126,7 +127,7 @@ const MarketMovers = () => {
 
           {/* View All Button */}
           <div className="mt-6 pt-4 border-t border-gray-100">
-            <button className="flex items-center space-x-1 text-blue hover:text-blue font-medium text-sm">
+            <button className="flex items-center space-x-1 text-blue-600 hover:text-blue-700 font-medium text-sm">
               <span>View all</span>
               <ChevronRight className="w-4 h-4" />
             </button>
