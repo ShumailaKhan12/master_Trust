@@ -33,7 +33,7 @@ const FundsPanel = () => {
       <div className="flex min-h-screen bg-gray-100">
           <Sidebar />
         <div className="space-y-6 w-full mt-18 m-0 lg:ml-110">
-          <div className="bg-white rounded-md shadow-sm border border-gray-100 overflow-hidden mx-6 mt-6">
+          <div className="bg-white rounded-md shadow-sm border border-gray-100 overflow-hidden mx-6 ">
             {/* Header */}
             <div className="p-6 md:p-8 border-b border-gray-200">
               <div className="flex items-start justify-between">

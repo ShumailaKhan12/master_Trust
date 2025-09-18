@@ -1,0 +1,32 @@
+{
+  "mostBoughtStocks": [
+    { "name": "WAAREEENR", "price": 3592.10, "change": 13.10, "changePercent": 0.37 },
+    { "name": "BHARTIARTL", "price": 1947.90, "change": 8.40, "changePercent": 0.43 },
+    { "name": "INFY", "price": 1523.70, "change": 12.40, "changePercent": 0.82 },
+    { "name": "HAL", "price": 4904.20, "change": 65.00, "changePercent": 1.34 }
+  ],
+  "payLaterStocks": [
+    { "name": "TORNTPOWER", "price": 1263.20, "change": 1.30, "changePercent": 0.10, "buyOption": "BUY 4X" },
+    { "name": "PYRINOX", "price": 1133.40, "change": -12.70, "changePercent": -1.11, "buyOption": "BUY 3X" },
+    { "name": "GMRAIRPORT", "price": 91.71, "change": -1.13, "changePercent": -1.22, "buyOption": "BUY 3X" }
+  ],
+  "investmentProducts": [
+    { "name": "Mutual funds", "icon": "💰", "badge": "LIVE NOW", "color": "bg-green-100" },
+    { "name": "IPO", "icon": "📈", "badge": "LIVE", "color": "bg-blue-100" },
+    { "name": "Stockcase", "icon": "🧳", "color": "bg-purple-100" },
+    { "name": "SipIt", "icon": "💧", "badge": "NEW", "color": "bg-orange-100" }
+  ],
+  "investingTools": [
+    { "name": "Screeners", "icon": "🔍" },
+    { "name": "Results", "icon": "📊" },
+    { "name": "Superstar investors", "icon": "⭐" },
+    { "name": "Trade from charts", "icon": "📈", "badge": "NEW" }
+  ],
+  "researchTools": [
+    { "name": "Investment ideas", "icon": "💡" },
+    { "name": "Trading calls", "icon": "📞" }
+  ],
+  "marketUpdates": [
+    { "name": "Live news", "icon": "📡" }
+  ]
+}
