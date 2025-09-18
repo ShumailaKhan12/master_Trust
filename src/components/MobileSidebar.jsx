@@ -1,6 +1,8 @@
 import React from "react";
 import Data from '../Data/home.json'
 import stocks from '../data/stocksData.json';
+
+
 const MobileSidebar = () => {
 
     // const { stocksData } = Data
@@ -26,7 +28,7 @@ const { stocksData } = stocks;
                             {stock.price}
                         </p>
                         <p
-                            className={`text-sm font-medium ${stock.change >= 0 ? "text-green-600" : "text-red-600"
+                            className={`text-sm font-medium ${stock.change >= 0 ? "text-green" : "text-red"
                                 }`}
                         >
                             {stock.change >= 0 ? "+" : ""}
