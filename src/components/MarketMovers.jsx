@@ -1,40 +1,13 @@
 import React, { useState } from 'react';
 import { ChevronDown, TrendingUp, Gift, ChevronRight } from 'lucide-react';
+import marketMoversData from '../Data/marketMoversData.json'; // JSON import
 
 const MarketMovers = () => {
   const [selectedIndex, setSelectedIndex] = useState('Nifty 50');
   const [selectedPeriod, setSelectedPeriod] = useState('1 Day');
   const [activeTab, setActiveTab] = useState('Top gainers & losers');
 
-  // Mock data for top gainers
-  const topGainers = [
-    { symbol: 'TATACONSUM', price: 1127.40, change: 35.30, changePercent: 3.23 },
-    { symbol: 'TRENT', price: 5222.00, change: 74.90, changePercent: 1.45 },
-    { symbol: 'SBIN', price: 842.70, change: 11.15, changePercent: 1.34 },
-    { symbol: 'MARUTI', price: 15744.00, change: 171.00, changePercent: 1.10 },
-    { symbol: 'TATAMOTORS', price: 719.15, change: 5.90, changePercent: 0.83 },
-    { symbol: 'BEL', price: 411.50, change: 8.60, changePercent: 2.13 },
-    { symbol: 'KOTAKBANK', price: 2049.30, change: 27.60, changePercent: 1.37 },
-    { symbol: 'HEROMOTOCO', price: 5379.00, change: 63.00, changePercent: 1.19 },
-    { symbol: 'COALINDIA', price: 399.00, change: 3.20, changePercent: 0.81 },
-    { symbol: 'TCS', price: 3171.00, change: 25.30, changePercent: 0.80 },
-
-
-  ];
-
-  // Mock data for top losers
-  const topLosers = [
-    { symbol: 'HDFCLIFE', price: 767.85, change: -6.50, changePercent: -0.84 },
-    { symbol: 'TATASTEEL', price: 170.99, change: -1.03, changePercent: -0.60 },
-    { symbol: 'BAJAJFINSV', price: 2069.00, change: -11.30, changePercent: -0.54 },
-    { symbol: 'POWERGRID', price: 287.05, change: -1.30, changePercent: -0.45 },
-    { symbol: 'ETERNAL', price: 326.05, change: -1.25, changePercent: -0.38 },
-    { symbol: 'TITAN', price: 3530.80, change: -26.00, changePercent: -0.73 },
-    { symbol: 'NESTLEIND', price: 1197.30, change: -6.90, changePercent: -0.56 },
-    { symbol: 'ITC', price: 410.95, change: -2.15, changePercent: -0.52 },
-    { symbol: 'SBILIFE', price: 1810.60, change: -8.20, changePercent: -0.45 },
-    { symbol: 'HINDALCO', price: 753.45, change: -2.50, changePercent: -0.33 }
-  ];
+  const { topGainers, topLosers } = marketMoversData;
 
   return (
     <>

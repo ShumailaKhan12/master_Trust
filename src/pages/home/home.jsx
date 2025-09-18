@@ -3,61 +3,24 @@ import Sidebar from '../../components/sidebar';
 import React, { useState } from 'react';
 import MarketMovers from '../../components/MarketMovers';
 import Navbar from '../../components/navbar';
-
+import MobileSidebar from '../../components/mobileSidebar';
+import Data from '../../Data/home.json'
 //Import Images
 import Bag from "../../assets/Images/empty-bag.png";
 const Home = () => {
 
     const [activeTab, setActiveTab] = useState('Stocks');
 
-    const mostBoughtData = [
-        { symbol: 'WAAREEENER', price: 3592.10, change: 13.10, changePercent: 0.37 },
-        { symbol: 'BHARTIARTL', price: 1947.90, change: 8.40, changePercent: 0.43 },
-        { symbol: 'INFY', price: 1523.70, change: 12.40, changePercent: 0.82 },
-        { symbol: 'HAL', price: 4904.20, change: 65.00, changePercent: 1.34 }
-    ];
 
-    const mostBoughtStocks = [
-        { name: 'WAAREEENR', price: 3592.10, change: +13.10, changePercent: +0.37 },
-        { name: 'BHARTIARTL', price: 1947.90, change: +8.40, changePercent: +0.43 },
-        { name: 'INFY', price: 1523.70, change: +12.40, changePercent: +0.82 },
-        { name: 'HAL', price: 4904.20, change: +65.00, changePercent: +1.34 }
-    ];
 
-    const payLaterStocks = [
-        { name: 'TORNTPOWER', price: 1263.20, change: +1.30, changePercent: +0.10, buyOption: 'BUY 4X' },
-        { name: 'PYRINOX', price: 1133.40, change: -12.70, changePercent: -1.11, buyOption: 'BUY 3X' },
-        { name: 'GMRAIRPORT', price: 91.71, change: -1.13, changePercent: -1.22, buyOption: 'BUY 3X' }
-    ];
+    const { mostBoughtStocks, payLaterStocks, investmentProducts, investingTools, researchTools, marketUpdates } = Data
 
-    const investmentProducts = [
-        { name: 'Mutual funds', icon: '💰', badge: 'LIVE NOW', color: 'bg-green-100' },
-        { name: 'IPO', icon: '📈', badge: 'LIVE', color: 'bg-blue-100' },
-        { name: 'Stockcase', icon: '🧳', color: 'bg-purple-100' },
-        { name: 'SipIt', icon: '💧', badge: 'NEW', color: 'bg-orange-100' }
-    ];
-
-    const investingTools = [
-        { name: 'Screeners', icon: '🔍' },
-        { name: 'Results', icon: '📊' },
-        { name: 'Superstar investors', icon: '⭐' },
-        { name: 'Trade from charts', icon: '📈', badge: 'NEW' }
-    ];
-
-    const researchTools = [
-        { name: 'Investment ideas', icon: '💡' },
-        { name: 'Trading calls', icon: '📞' }
-    ];
-
-    const marketUpdates = [
-        { name: 'Live news', icon: '📡' }
-    ];
     return (
         <div>
             <Navbar />
             <div className="flex bg-gray-100 ">
                 <Sidebar />
-                <div className="p-4 space-y-6 pt-16 w-full my-2  m-0 lg:ml-110">
+                <div className="p-4 space-y-6 pt-16 w-full my-2 mt-5 lg:mt-2 lg:ml-110">
                     {/* Tabs */}
                     <div className=" rounded-lg">
                         <div className="flex shadow-md bg-white rounded-tl-lg rounded-tr-lg">
@@ -78,6 +41,11 @@ const Home = () => {
                         <div className="p-6 shadow-md rounded-b-lg">
                             {activeTab === "Stocks" && (
                                 <>
+
+
+                                    <div className='block lg:hidden'>
+                                        <MobileSidebar />
+                                    </div>
                                     {/* Most bought on Kotak */}
                                     <div className=" w-full">
                                         <h3 className="text-lg font-semibold text-gray-900 mb-4 pt-3">Most bought on Kotak</h3>

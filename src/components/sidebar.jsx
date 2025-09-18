@@ -1,32 +1,13 @@
 import React, { useState } from "react";
 import { Search, Filter, Edit3, X, ListFilter, Pencil, ListPlus } from "lucide-react";
 import { MdFilterList } from "react-icons/md";
+import stocks from '../data/stocksData.json';
 
 const Sidebar = ({ isOpen, onClose }) => {
 
 
-  const stocksData = [
-    { symbol: "TATASTEEL", exchange: "NSE", price: 170.99, change: -1.03, changePercent: -0.6 },
-    { symbol: "HAPPSTMNDS", exchange: "NSE", price: 575.0, change: 0.3, changePercent: 0.05 },
-    { symbol: "RAMCOCEM", exchange: "NSE", price: 1063.7, change: 23.7, changePercent: 2.27 },
-    { symbol: "TATATECH", exchange: "NSE", price: 713.7, change: 2.5, changePercent: 0.35 },
-    { symbol: "TECHM", exchange: "NSE", price: 1539.1, change: 7.6, changePercent: 0.5 },
-    { symbol: "GODREJPROP", exchange: "NSE", price: 2077.9, change: 16.9, changePercent: 0.82 },
-    { symbol: "TATAMOTORS", exchange: "NSE", price: 719.45, change: 6.2, changePercent: 0.87 },
-    { symbol: "TCS", exchange: "NSE", price: 3169.9, change: 24.2, changePercent: 0.77 },
-    { symbol: "TATACHEM", exchange: "NSE", price: 1006.9, change: 24.35, changePercent: 2.48 },
-    { symbol: "RELIANCE", exchange: "NSE", price: 1411.1, change: 5.8, changePercent: 0.41 },
-    { symbol: "INDHOTEL", exchange: "NSE", price: 784.65, change: 6.0, changePercent: 0.77 },
-    { symbol: "INDHOTEL", exchange: "NSE", price: 784.65, change: 6.0, changePercent: 0.77 },
-    { symbol: "INDHOTEL", exchange: "NSE", price: 784.65, change: 6.0, changePercent: 0.77 },
-    { symbol: "INDHOTEL", exchange: "NSE", price: 784.65, change: 6.0, changePercent: 0.77 },
-    { symbol: "RELIANCE", exchange: "NSE", price: 1411.1, change: 5.8, changePercent: 0.41 },
-    { symbol: "INDHOTEL", exchange: "NSE", price: 784.65, change: 6.0, changePercent: 0.77 },
-    { symbol: "INDHOTEL", exchange: "NSE", price: 784.65, change: 6.0, changePercent: 0.77 },
-    { symbol: "INDHOTEL", exchange: "NSE", price: 784.65, change: 6.0, changePercent: 0.77 },
-    { symbol: "INDHOTEL", exchange: "NSE", price: 784.65, change: 6.0, changePercent: 0.77 },
-  ];
-
+const { stocksData } = stocks;
+ 
   const [currentPage, setCurrentPage] = useState(1);
 
   // Just split into 2 pages manually
@@ -40,7 +21,7 @@ const Sidebar = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className={`   hidden  fixed lg:block inset-y-0 z-50  ml-80 lg:ml-3 w-72 lg:w-110   mt-18  bg-white border rounded-lg border-gray-200 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
+      className={`   hidden  fixed lg:block inset-y-0   ml-80 lg:ml-3 w-72 lg:w-110   mt-18 bg-white border rounded-lg border-gray-200 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0`}
     >
       <div className="h-full flex flex-col">
