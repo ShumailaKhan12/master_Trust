@@ -1,0 +1,28 @@
+{
+    "portfolioData": [
+        {
+            "name": "Eternal Ltd",
+            "price": "326.00",
+            "returns": "417.88%",
+            "logo": "https://dummyimage.com/40x40/f00/fff.png&text=E"
+        },
+        {
+            "name": "Bharat Electronics Ltd",
+            "price": "411.65",
+            "returns": "262.97%",
+            "logo": "https://dummyimage.com/40x40/0af/fff.png&text=B"
+        },
+        {
+            "name": "Trent Ltd",
+            "price": "5225.00",
+            "returns": "259.29%",
+            "logo": "https://dummyimage.com/40x40/00f/fff.png&text=T"
+        },
+        {
+            "name": "Mahindra & Mahindra Ltd",
+            "price": "3630.00",
+            "returns": "188.62%",
+            "logo": "https://dummyimage.com/40x40/f00/fff.png&text=M"
+        }
+    ]
+}

@@ -18,7 +18,7 @@ const MarketMovers = () => {
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-bold text-blue">Market movers</h2>
             <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
-              <TrendingUp className="w-5 h-5 text-red-500" />
+              <TrendingUp className="w-5 h-5 text-red" />
             </div>
           </div>
         </div>
@@ -30,6 +30,7 @@ const MarketMovers = () => {
               <button
                 onClick={() => setActiveTab('Top gainers & losers')}
                 className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'Top gainers & losers'
+                  ? 'border-blue text-blue'
                   ? 'border-blue text-blue'
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                   }`}
@@ -76,8 +77,8 @@ const MarketMovers = () => {
             {/* Top Gainers */}
             <div className=' '>
               <div className="flex items-center space-x-2 mb-4 ">
-                <h3 className="text-lg font-medium text-gray-900">Top gainers</h3>
-                <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
+                <h3 className="text-lg font-medium text-gray-800">Top gainers</h3>
+                <span className="bg-green-100 text-green text-xs font-medium px-2 py-1 rounded-full">
                   {topGainers.length}
                 </span>
               </div>
@@ -85,11 +86,11 @@ const MarketMovers = () => {
                 {topGainers.map((stock, index) => (
                   <div key={stock.symbol} className="flex items-center justify-between py-2  hover:bg-gray-50    px-2">
                     <div className="flex-1">
-                      <div className="font-medium text-gray-900 text-sm">{stock.symbol}</div>
+                      <div className="font-medium text-gray-800 text-sm">{stock.symbol}</div>
                     </div>
                     <div className="text-right">
-                      <div className="font-semibold text-gray-900 text-sm">{stock.price}</div>
-                      <div className="text-green-600 text-xs font-medium">
+                      <div className="font-semibold text-gray-800 text-sm">{stock.price}</div>
+                      <div className="text-green text-xs font-medium">
                         +{stock.change} (+{stock.changePercent}%)
                       </div>
                     </div>
@@ -102,8 +103,8 @@ const MarketMovers = () => {
             {/* Top Losers */}
             <div>
               <div className="flex items-center space-x-2 mb-4 ">
-                <h3 className="text-lg font-medium text-gray-900">Top losers</h3>
-                <span className="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">
+                <h3 className="text-lg font-medium text-gray-800">Top losers</h3>
+                <span className="bg-red-100 text-red text-xs font-medium px-2 py-1 rounded-full">
                   {topLosers.length}
                 </span>
               </div>
@@ -111,11 +112,11 @@ const MarketMovers = () => {
                 {topLosers.map((stock, index) => (
                   <div key={stock.symbol} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded-lg px-2">
                     <div className="flex-1">
-                      <div className="font-medium text-gray-900 text-sm">{stock.symbol}</div>
+                      <div className="font-medium text-gray-800 text-sm">{stock.symbol}</div>
                     </div>
                     <div className="text-right">
-                      <div className="font-semibold text-gray-900 text-sm">{stock.price}</div>
-                      <div className="text-red-600 text-xs font-medium">
+                      <div className="font-semibold text-gray-800 text-sm">{stock.price}</div>
+                      <div className="text-red text-xs font-medium">
                         {stock.change} ({stock.changePercent}%)
                       </div>
                     </div>
