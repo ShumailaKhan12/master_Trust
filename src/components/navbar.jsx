@@ -13,10 +13,10 @@ const Navbar = () => {
     const [isProfileOpen, setIsProfileOpen] = useState(false);
     return (
         <>
-            <nav className="w-full bg-white border-b shadow-sm px-6 py-2 flex items-center fixed z-60">
+            <nav className="w-full bg-white  shadow-sm px-6  flex items-center fixed z-60">
                 {/* Left Section - NIFTY & SENSEX */}
-                <div className="flex items-center space-x-6">
-                    <div className="hidden md:flex items-center space-x-8 text-sm">
+                <div className="flex items-center space-x-6 h-full  ">
+                    <div className="hidden md:flex items-center space-x-8 text-sm border-r border-gray-300 h-16  ">
                         <div className="flex flex-col">
                             <span className="font-semibold">NIFTY</span>
                             <div>
@@ -38,7 +38,7 @@ const Navbar = () => {
                                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                                 className="flex items-center text-gray-700 hover:text-blue-600 cursor-pointer"
                             >
-                                <ChevronUp />
+                                {isDropdownOpen ? <ChevronUp /> : <ChevronDown />}
                             </button>
 
                             {/* Dropdown list */}
@@ -67,7 +67,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Center Logo */}
-                <div className="flex justify-start ml-12 flex-grow">
+                <div className="flex justify-start ml-8 flex-grow">
                     <img src={MasterLogo} alt="Logo" className='w-24 h-14' />
                 </div>
 
@@ -76,7 +76,7 @@ const Navbar = () => {
                     <NavLink to="/" className={({ isActive }) => isActive ? "text-blue-600 font-medium flex items-center" : "text-gray-600 hover:text-blue-600 flex items-center"}><GoHomeFill className='me-2 text-lg' />Home</NavLink>
                     <NavLink to="/portfolio" className={({ isActive }) => isActive ? "text-blue-600 font-medium flex items-center" : "text-gray-600 hover:text-blue-600 flex items-center"}><IoBagOutline className='me-2 text-lg' />Portfolio</NavLink>
                     <NavLink to="/funds" className={({ isActive }) => isActive ? "text-blue-600 font-medium flex items-center" : "text-gray-600 hover:text-blue-600 flex items-center"}><MdOutlineAccountBalanceWallet className='me-2 text-lg' /> Funds</NavLink>
-                    <div onClick={() => setIsProfileOpen(!isProfileOpen)} className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 text-blue-700 font-semibold cursor-pointer">
+                    <div onClick={() => setIsProfileOpen(!isProfileOpen)} className="w-8 h-8 flex items-center justify-center rounded-lg bg-blue-100 text-blue-700 font-semibold cursor-pointer">
                         R
                     </div>
                 </div>
@@ -91,7 +91,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="absolute top-14 left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-4 md:hidden z-50">
+                <div className=" sm:hidden absolute top-14 left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-4   z-50">
                     <NavLink to="/" onClick={() => setIsOpen(false)} className={({ isActive }) => isActive ? "text-blue-600 font-medium" : "text-gray-600 hover:text-blue-600"}>Home</NavLink>
                     <NavLink to="/portfolio" onClick={() => setIsOpen(false)} className={({ isActive }) => isActive ? "text-blue-600 font-medium" : "text-gray-600 hover:text-blue-600"}>Portfolio</NavLink>
                     <NavLink to="/funds" onClick={() => setIsOpen(false)} className={({ isActive }) => isActive ? "text-blue-600 font-medium" : "text-gray-600 hover:text-blue-600"}>Funds</NavLink>
@@ -104,7 +104,7 @@ const Navbar = () => {
 
 
             {isProfileOpen && (
-                <div className="fixed inset-0 flex justify-end z-50 pt-20 pr-5">
+                <div className="fixed inset-0 flex justify-end z-50 pt-20 pr-5 sm:hidden ">
                     {/* Overlay click → close */}
                     <div
                         className="absolute inset-0"
@@ -112,7 +112,7 @@ const Navbar = () => {
                     ></div>
 
                     {/* Profile Drawer */}
-                    <div className="relative w-64 bg-white h-48 shadow-lg p-6 flex flex-col z-50">
+                    <div className="relative w-64 lg:w-44 rounded-b-lg bg-white h-48 lg:h-28 shadow-lg p-4 flex flex-col z-50">
                         {/* User Info */}
                         <div className="mb-6">
                             <h2 className="text-lg font-semibold">Hi, Rajik</h2>
@@ -121,9 +121,9 @@ const Navbar = () => {
                         {/* Logout */}
 
                         <div className='flex items-center'>
-                            <LogOut />
+                            <LogOut className='bg-gray-200  p-1 rounded-full' />
                             <button
-                                className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600"
+                                className="px-2 "
                                 onClick={() => {
                                     // logout logic
                                     setIsProfileOpen(false);
