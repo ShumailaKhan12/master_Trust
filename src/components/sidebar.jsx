@@ -40,27 +40,27 @@ const Sidebar = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className={`fixed lg:static inset-y-0 z-50 w-110 bg-white border rounded-lg border-gray-200 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
+      className={`   hidden  fixed lg:block inset-y-0 z-50  ml-80 lg:ml-3 w-72 lg:w-110   mt-18  bg-white border rounded-lg border-gray-200 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0`}
     >
       <div className="h-full flex flex-col">
 
         {/* Sticky Top Section */}
-        <div className="sticky top-0 bg-white rounded-lg z-10">
+        <div className="fixed bottom-0 left-0 right-0 lg:static bg-white rounded-t-lg border-t border-gray-200 z-20">
 
 
           {/* Pagination (only 1 & 2 fixed) */}
           <div className="px-4 pt-4 border-b border-gray-200">
             <div className="flex items-end justify-between">
               {/* Left Pagination Numbers */}
-              <div className="flex space-x-1">
+              <div className="flex space-x-1 ">
                 {[1, 2].map((page) => (
                   <button
                     key={page}
                     onClick={() => setCurrentPage(page)}
                     className={`px-2 text-sm pb-2 cursor-pointer ${currentPage === page
-                      ? "border-b-2 border-blue-600 text-blue-600 font-semibold"
-                      : "text-gray-700 font-semibold"
+                      ? "border-b-2 border-blue-600 text-xl text-blue-600 font-semibold"
+                      : "text-gray-700 font-semibold text-xl"
                       }`}
                   >
                     {page}
@@ -104,7 +104,7 @@ const Sidebar = ({ isOpen, onClose }) => {
         </div>
 
         {/* Scrollable Stock List */}
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto pb-16">
           <div className="p-4 space-y-2">
             {getCurrentPageData().map((stock, index) => (
               <div
