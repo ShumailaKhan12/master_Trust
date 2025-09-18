@@ -58,9 +58,9 @@ const Sidebar = ({ isOpen, onClose }) => {
                   <button
                     key={page}
                     onClick={() => setCurrentPage(page)}
-                    className={`px-2 text-sm pb-2 cursor-pointer ${currentPage === page
-                      ? "border-b-2 border-blue-600 text-xl text-blue-600 font-semibold"
-                      : "text-gray-700 font-semibold text-xl"
+                    className={`px-3 pb-2 text-xl cursor-pointer ${currentPage === page
+                      ? "text-blue border-blue font-semibold"
+                      : "text-gray-700 font-semibold"
                       }`}
                   >
                     {page}
@@ -69,9 +69,9 @@ const Sidebar = ({ isOpen, onClose }) => {
               </div>
 
               {/* Right Button */}
-              <div className="flex items-center border border-gray-100 p-2 rounded-lg cursor-pointer mb-1">
+              {/* <div className="flex items-center border border-gray-100 p-2 rounded-lg cursor-pointer mb-1">
                 <ListPlus className="w-5 h-5 text-blue-600" />
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -90,7 +90,7 @@ const Sidebar = ({ isOpen, onClose }) => {
 
             </div>
 
-            <div className=" flex space-x-1">
+            {/* <div className=" flex space-x-1">
 
               <div className="flex items-center border border-gray-100 p-2 rounded-lg cursor-pointer ">
                 <ListFilter className="w-5 h-5 text-blue-600" />
@@ -99,7 +99,7 @@ const Sidebar = ({ isOpen, onClose }) => {
               <div className="flex items-center border border-gray-100 p-2 rounded-lg cursor-pointer">
                 <Pencil className="w-5 h-5 text-blue-600" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -118,7 +118,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                 <div className="text-right">
                   <div className="font-medium text-sm text-gray-500">{stock.price}</div>
                   <div
-                    className={`text-xs ${stock.change >= 0 ? "text-green-600 font-semibold" : "text-red-600"
+                    className={`text-xs ${stock.change >= 0 ? "text-green font-semibold" : "text-red"
                       }`}
                   >
                     {stock.change >= 0 ? "+" : ""}

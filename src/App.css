@@ -43,3 +43,8 @@
  .text-purple {
    color: var(--purple-color);
  }
+
+ /* Border Css */
+ .border-blue{
+  border-bottom: 2px solid var(--blue-color);
+ }

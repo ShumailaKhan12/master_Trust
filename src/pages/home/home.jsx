@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import MarketMovers from '../../components/MarketMovers';
 import Navbar from '../../components/navbar';
 
+//Import Images
+import Bag from "../../assets/Images/empty-bag.png";
 const Home = () => {
 
     const [activeTab, setActiveTab] = useState('Stocks');
@@ -52,7 +54,7 @@ const Home = () => {
     ];
     return (
         <div>
-            <Navbar/>
+            <Navbar />
             <div className="flex bg-gray-100 ">
                 <Sidebar />
                 <div className="p-4 space-y-6 pt-16 w-full my-2  m-0 lg:ml-110">
@@ -64,7 +66,7 @@ const Home = () => {
                                     key={tab}
                                     onClick={() => setActiveTab(tab)}
                                     className={`px-6 py-3 text-sm font-medium ${activeTab === tab
-                                        ? 'text-blue-600 border-b-2 border-blue-600'
+                                        ? 'text-blue border-blue'
                                         : 'text-gray-600 hover:text-gray-900'
                                         }`}
                                 >
@@ -192,9 +194,11 @@ const Home = () => {
 
 
                             {activeTab === "F&O" && (
-                                <div className="flex justify-center items-center h-40">
+                                <div className="flex flex-col justify-center items-center h-full">
+                                    <img src={Bag} alt="Bag" />
                                     <p className="text-gray-500 text-lg font-semibold">
-                                        🚧 Coming Soon 🚧
+                                        {/* 🚧 Coming Soon 🚧 */}
+                                        Your positions will appear here.
                                     </p>
                                 </div>
                             )}
@@ -202,6 +206,7 @@ const Home = () => {
                             {/* Mutual Funds Content */}
                             {activeTab === "Mutual funds" && (
                                 <div className="flex justify-center items-center h-40">
+                                    <img src={Bag} alt="bag" />
                                     <p className="text-gray-700 text-lg font-semibold">
                                         📢 Mutual Funds section under development
                                     </p>
