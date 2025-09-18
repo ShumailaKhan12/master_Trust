@@ -18,8 +18,8 @@ const MarketMovers = () => {
     { symbol: 'HEROMOTOCO', price: 5379.00, change: 63.00, changePercent: 1.19 },
     { symbol: 'COALINDIA', price: 399.00, change: 3.20, changePercent: 0.81 },
     { symbol: 'TCS', price: 3171.00, change: 25.30, changePercent: 0.80 },
-    
-    
+
+
   ];
 
   // Mock data for top losers
@@ -38,135 +38,135 @@ const MarketMovers = () => {
 
   return (
     <>
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 mt-4">
-      {/* Header */}
-      <div className="p-6 border-b border-gray-200">
-        <div className="flex items-center justify-between">
-          <h2 className="text-xl font-semibold text-gray-900">Market movers</h2>
-          <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
-            <TrendingUp className="w-5 h-5 text-red-500" />
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 mt-4">
+        {/* Header */}
+        <div className="p-6 border-b border-gray-200">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-semibold text-gray-900">Market movers</h2>
+            <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
+              <TrendingUp className="w-5 h-5 text-red-500" />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Tab Navigation */}
-      <div className="border-b border-gray-200">
-        <div className="px-6">
-          <nav className="flex space-x-8">
-            <button
-              onClick={() => setActiveTab('Top gainers & losers')}
-              className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'Top gainers & losers'
+        {/* Tab Navigation */}
+        <div className="border-b border-gray-200">
+          <div className="px-6">
+            <nav className="flex space-x-8">
+              <button
+                onClick={() => setActiveTab('Top gainers & losers')}
+                className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'Top gainers & losers'
                   ? 'border-blue-500 text-blue-600'
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                }`}
-            >
-              Top gainers & losers
-            </button>
-            <button
-              onClick={() => setActiveTab('52 weeks high & low')}
-              className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === '52 weeks high & low'
+                  }`}
+              >
+                Top gainers & losers
+              </button>
+              <button
+                onClick={() => setActiveTab('52 weeks high & low')}
+                className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === '52 weeks high & low'
                   ? 'border-blue-500 text-blue-600'
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                }`}
-            >
-              52 weeks high & low
-            </button>
-          </nav>
-        </div>
-      </div>
-
-      {/* Filters */}
-      <div className="p-6 border-b border-gray-100">
-        <div className="flex items-center justify-end space-x-4">
-          {/* Index Selector */}
-          <div className="relative">
-            <button className="flex items-center space-x-2 px-4 py-2 bg-gray-50 border border-gray-200 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100">
-              <span>{selectedIndex}</span>
-              <ChevronDown className="w-4 h-4" />
-            </button>
-          </div>
-
-          {/* Period Selector */}
-          <div className="relative">
-            <button className="flex items-center space-x-2 px-4 py-2 bg-gray-50 border border-gray-200 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100">
-              <span>{selectedPeriod}</span>
-              <ChevronDown className="w-4 h-4" />
-            </button>
+                  }`}
+              >
+                52 weeks high & low
+              </button>
+            </nav>
           </div>
         </div>
-      </div>
 
-      {/* Content */}
-      <div className="p-6">
-        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-1 xl:grid-cols-2 gap-8 ">
-          {/* Top Gainers */}
-          <div className=' '>
-            <div className="flex items-center space-x-2 mb-4 ">
-              <h3 className="text-lg font-medium text-gray-900">Top gainers</h3>
-              <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
-                {topGainers.length}
-              </span>
+        {/* Filters */}
+        <div className="p-6 border-b border-gray-100">
+          <div className="flex items-center justify-end space-x-4">
+            {/* Index Selector */}
+            <div className="relative">
+              <button className="flex items-center space-x-2 px-4 py-2 bg-gray-50 border border-gray-200 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100">
+                <span>{selectedIndex}</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
             </div>
-            <div className="space-y-3 grid  grid-cols-1 lg:grid-cols-2">
-              {topGainers.map((stock, index) => (
-                <div key={stock.symbol} className="flex items-center justify-between py-2  hover:bg-gray-50    px-2">
-                  <div className="flex-1">
-                    <div className="font-medium text-gray-900 text-sm">{stock.symbol}</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="font-semibold text-gray-900 text-sm">{stock.price}</div>
-                    <div className="text-green-600 text-xs font-medium">
-                      +{stock.change} (+{stock.changePercent}%)
+
+            {/* Period Selector */}
+            <div className="relative">
+              <button className="flex items-center space-x-2 px-4 py-2 bg-gray-50 border border-gray-200 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100">
+                <span>{selectedPeriod}</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="p-6">
+          <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-1 xl:grid-cols-2 gap-8 ">
+            {/* Top Gainers */}
+            <div className=' '>
+              <div className="flex items-center space-x-2 mb-4 ">
+                <h3 className="text-lg font-medium text-gray-900">Top gainers</h3>
+                <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
+                  {topGainers.length}
+                </span>
+              </div>
+              <div className="space-y-3 grid  grid-cols-1 lg:grid-cols-2">
+                {topGainers.map((stock, index) => (
+                  <div key={stock.symbol} className="flex items-center justify-between py-2  hover:bg-gray-50    px-2">
+                    <div className="flex-1">
+                      <div className="font-medium text-gray-900 text-sm">{stock.symbol}</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-semibold text-gray-900 text-sm">{stock.price}</div>
+                      <div className="text-green-600 text-xs font-medium">
+                        +{stock.change} (+{stock.changePercent}%)
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-              
-            </div>
-          </div>
+                ))}
 
-          {/* Top Losers */}
-          <div>
-            <div className="flex items-center space-x-2 mb-4 ">
-              <h3 className="text-lg font-medium text-gray-900">Top losers</h3>
-              <span className="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">
-                {topLosers.length}
-              </span>
+              </div>
             </div>
-            <div className="space-y-3 grid  grid-cols-1 lg:grid-cols-2">
-              {topLosers.map((stock, index) => (
-                <div key={stock.symbol} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded-lg px-2">
-                  <div className="flex-1">
-                    <div className="font-medium text-gray-900 text-sm">{stock.symbol}</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="font-semibold text-gray-900 text-sm">{stock.price}</div>
-                    <div className="text-red-600 text-xs font-medium">
-                      {stock.change} ({stock.changePercent}%)
+
+            {/* Top Losers */}
+            <div>
+              <div className="flex items-center space-x-2 mb-4 ">
+                <h3 className="text-lg font-medium text-gray-900">Top losers</h3>
+                <span className="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">
+                  {topLosers.length}
+                </span>
+              </div>
+              <div className="space-y-3 grid  grid-cols-1 lg:grid-cols-2">
+                {topLosers.map((stock, index) => (
+                  <div key={stock.symbol} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded-lg px-2">
+                    <div className="flex-1">
+                      <div className="font-medium text-gray-900 text-sm">{stock.symbol}</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-semibold text-gray-900 text-sm">{stock.price}</div>
+                      <div className="text-red-600 text-xs font-medium">
+                        {stock.change} ({stock.changePercent}%)
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
+          </div>
+
+          {/* View All Button */}
+          <div className="mt-6 pt-4 border-t border-gray-100">
+            <button className="flex items-center space-x-1 text-blue-600 hover:text-blue-700 font-medium text-sm">
+              <span>View all</span>
+              <ChevronRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
 
-        {/* View All Button */}
-        <div className="mt-6 pt-4 border-t border-gray-100">
-          <button className="flex items-center space-x-1 text-blue-600 hover:text-blue-700 font-medium text-sm">
-            <span>View all</span>
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        </div>
+        {/* Refer and Earn Section */}
+
       </div>
 
-      {/* Refer and Earn Section */}
-    
-    </div>
 
-
-{/* Refer */}
-      <div className="p-6 border-t border-gray-100 mt-4 bg-white">
+      {/* Refer */}
+      {/* <div className="p-6 border-t border-gray-100 mt-4 bg-white">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-yellow-500 rounded-lg flex items-center justify-center">
@@ -182,8 +182,8 @@ const MarketMovers = () => {
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>
-      </div>
-      </>
+      </div> */}
+    </>
   );
 };
 
