@@ -94,11 +94,14 @@ const Home = () => {
                                         <h3 className="text-lg font-semibold text-gray-900 mb-4 pt-4">Investing tools</h3>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                                             {investingTools.map((tool, index) => (
-                                                <div key={index} className="p-2 border bg-white flex items-center border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer relative">
+                                                <div key={index} className="p-3 border bg-white flex items-center border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer relative">
                                                     {tool.badge && (
                                                         <span className="absolute top-2 right-2 px-2 py-1 text-xs font-bold bg-orange-600 text-white rounded"> {tool.badge} </span>)}
-                                                    <div className="text-2xl mb-2">{tool.icon}</div>
-                                                    <h4 className="font-medium text-gray-900">{tool.name}</h4>
+                                                    <div className="flex items-center">
+                                                        <img src={tool.icon} className='h-8 w-8 me-3' alt="loading" />
+                                                        <h4 className="font-medium text-gray-900">{tool.name}</h4>
+                                                    </div>
+
                                                 </div>))}
                                         </div>
                                     </div>
@@ -108,10 +111,13 @@ const Home = () => {
                                         <div className="">
                                             <h3 className="text-lg font-semibold t  ext-gray-900 mb-4 pt-4">Research</h3>
                                             <div className="space-y-3 bg0">
-                                                {researchTools.map((tool, index) => (
+                                                {researchTools?.map((tool, index) => (
                                                     <div key={index} className="flex items-center space-x-3 p-3 border bg-white border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer">
-                                                        <div className="text-xl">{tool.icon}</div>
-                                                        <h4 className="font-medium text-gray-900">{tool.name}</h4>
+                                                        <div className="flex items-center">
+                                                            <img src={tool?.icon} className='h-10 w-12 me-3' alt="Laoding" />
+
+                                                            <h4 className="font-medium text-gray-900">{tool?.name}</h4>
+                                                        </div>
                                                     </div>
                                                 ))}
                                             </div>
@@ -121,8 +127,10 @@ const Home = () => {
                                             <div className="space-y-3">
                                                 {marketUpdates.map((update, index) => (
                                                     <div key={index} className="flex items-center space-x-3 p-3 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer">
-                                                        <div className="text-xl">{update.icon}</div>
-                                                        <h4 className="font-medium text-gray-900">{update.name}</h4>
+                                                        <div className="flex items-center">
+                                                            <img src={update?.icon} className='h-10 w-12 me-3' alt="Loading" />
+                                                            <h4 className="font-medium text-gray-900">{update.name}</h4>
+                                                        </div>
                                                     </div>
                                                 ))}
                                             </div>

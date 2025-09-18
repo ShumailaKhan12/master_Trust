@@ -80,36 +80,36 @@
   "investingTools": [
     {
       "name": "Screeners",
-      "icon": "🔍"
+      "icon": "../../public/images/home/setting.png"
     },
     {
       "name": "Results",
-      "icon": "📊"
+      "icon": "../../public/images/home/result.png"
     },
     {
       "name": "Superstar investors",
-      "icon": "⭐"
+      "icon": "../../public/images/home/superstar.png"
     },
     {
       "name": "Trade from charts",
-      "icon": "📈",
+      "icon": "../../public/images/home/trade-chart.png",
       "badge": "NEW"
     }
   ],
   "researchTools": [
     {
       "name": "Investment ideas",
-      "icon": "💡"
+      "icon": "../../public/images/home/investment.png"
     },
     {
       "name": "Trading calls",
-      "icon": "📞"
+      "icon": "../../public/images/home/investment.png"
     }
   ],
   "marketUpdates": [
     {
       "name": "Live news",
-      "icon": "📡"
+      "icon": "../../public/images/home/Live.png"
     }
   ]
 }
