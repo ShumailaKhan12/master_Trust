@@ -1,34 +1,39 @@
 import React from "react";
 import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
+import stocks from '../../Data/portfolioData.json'
 
 const Portfolio = () => {
-  const stocks = [
-    {
-      name: "Eternal Ltd",
-      price: "326.00",
-      returns: "417.88%",
-      logo: "https://dummyimage.com/40x40/f00/fff.png&text=E", // replace with real logo
-    },
-    {
-      name: "Bharat Electronics Ltd",
-      price: "411.65",
-      returns: "262.97%",
-      logo: "https://dummyimage.com/40x40/0af/fff.png&text=B",
-    },
-    {
-      name: "Trent Ltd",
-      price: "5225.00",
-      returns: "259.29%",
-      logo: "https://dummyimage.com/40x40/00f/fff.png&text=T",
-    },
-    {
-      name: "Mahindra & Mahindra Ltd",
-      price: "3630.00",
-      returns: "188.62%",
-      logo: "https://dummyimage.com/40x40/f00/fff.png&text=M",
-    },
-  ];
+
+const { portfolioData } = stocks;
+
+
+  // const stocks = [
+  //   {
+  //     name: "Eternal Ltd",
+  //     price: "326.00",
+  //     returns: "417.88%",
+  //     logo: "https://dummyimage.com/40x40/f00/fff.png&text=E", 
+  //   },
+  //   {
+  //     name: "Bharat Electronics Ltd",
+  //     price: "411.65",
+  //     returns: "262.97%",
+  //     logo: "https://dummyimage.com/40x40/0af/fff.png&text=B",
+  //   },
+  //   {
+  //     name: "Trent Ltd",
+  //     price: "5225.00",
+  //     returns: "259.29%",
+  //     logo: "https://dummyimage.com/40x40/00f/fff.png&text=T",
+  //   },
+  //   {
+  //     name: "Mahindra & Mahindra Ltd",
+  //     price: "3630.00",
+  //     returns: "188.62%",
+  //     logo: "https://dummyimage.com/40x40/f00/fff.png&text=M",
+  //   },
+  // ];
 
   return (
     <>
@@ -72,7 +77,7 @@ const Portfolio = () => {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {stocks.map((stock, index) => (
+                  {portfolioData.map((stock, index) => (
                     <div
                       key={index}
                       className="flex items-center justify-between px-4 py-6 border border-slate-300 rounded-lg bg-white"

@@ -29,22 +29,22 @@ const Navbar = () => {
                     <div className="flex flex-col">
                         <span className="font-semibold text-sm">NIFTY</span>
                         <div>
-                            <span className='text-xs'>25334.15 </span>
-                            <span className="text-green-600 text-xs">+95.05 (+0.38%)</span>
+                            <span className='text-xs font-semibold'>25334.15 </span>
+                            <span className="text-green text-xs">+95.05 (+0.38%)</span>
                         </div>
                     </div>
                     <div className="flex flex-col">
                         <span className="font-semibold text-sm ">SENSEX</span>
                         <div>
                             <span className='text-xs'>82713.14 </span>
-                            <span className="text-green-600 text-xs">+332.45 (+0.40%)</span>
+                            <span className="text-green text-xs">+332.45 (+0.40%)</span>
                         </div>
                     </div>
                     {/* Dropdown */}
                     <div className="relative z-100">
                         <button
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                            className="flex items-center text-gray-700  hover:text-blue-600 cursor-pointer"
+                            className="flex items-center text-gray-700  hover:text-blue cursor-pointer"
                         >
                             {isDropdownOpen ? <ChevronUp /> : <ChevronDown />}
                         </button>
@@ -79,16 +79,16 @@ const Navbar = () => {
 
                 {/* Right Section */}
                 <div className="hidden md:flex items-center space-x-6 ml-auto">
-                    <NavLink to="/" className={({ isActive }) => isActive ? "text-blue-600 font-medium flex items-center" : "text-gray-600 hover:text-blue-600 flex items-center"}>
+                    <NavLink to="/" className={({ isActive }) => isActive ? "text-blue font-medium flex items-center" : "text-gray-600 hover:text-blue flex items-center"}>
                         <GoHomeFill className="me-2 text-lg" />Home
                     </NavLink>
-                    <NavLink to="/portfolio" className={({ isActive }) => isActive ? "text-blue-600 font-medium flex items-center" : "text-gray-600 hover:text-blue-600 flex items-center"}>
+                    <NavLink to="/portfolio" className={({ isActive }) => isActive ? "text-blue font-medium flex items-center" : "text-gray-600 hover:text-blue flex items-center"}>
                         <IoBagOutline className="me-2 text-lg" />Portfolio
                     </NavLink>
-                    <NavLink to="/funds" className={({ isActive }) => isActive ? "text-blue-600 font-medium flex items-center" : "text-gray-600 hover:text-blue-600 flex items-center"}>
+                    <NavLink to="/funds" className={({ isActive }) => isActive ? "text-blue font-medium flex items-center" : "text-gray-600 hover:text-blue flex items-center"}>
                         <MdOutlineAccountBalanceWallet className="me-2 text-lg" />Funds
                     </NavLink>
-                    <div onClick={() => setIsProfileOpen(!isProfileOpen)} className="w-8 h-8 flex items-center justify-center rounded-lg bg-blue-100 text-blue-700 font-semibold cursor-pointer">
+                    <div onClick={() => setIsProfileOpen(!isProfileOpen)} className="w-8 h-8 flex items-center justify-center rounded-lg bg-blue-100 text-blue font-semibold cursor-pointer">
                         R
                     </div>
                 </div>
@@ -108,13 +108,13 @@ const Navbar = () => {
 
             {/* Mobile Bottom Tab */}
             <div className="fixed bottom-0 left-0 w-full bg-white shadow-inner border-t border-gray-200 flex justify-around py-2 md:hidden z-50">
-                <NavLink to="/" className={({ isActive }) => isActive ? "text-blue-600 flex flex-col items-center text-xs" : "text-gray-500 flex flex-col items-center text-xs"}>
+                <NavLink to="/" className={({ isActive }) => isActive ? "text-blue flex flex-col items-center text-xs" : "text-gray-500 flex flex-col items-center text-xs"}>
                     <GoHomeFill className="text-lg" />Home
                 </NavLink>
-                <NavLink to="/portfolio" className={({ isActive }) => isActive ? "text-blue-600 flex flex-col items-center text-xs" : "text-gray-500 flex flex-col items-center text-xs"}>
+                <NavLink to="/portfolio" className={({ isActive }) => isActive ? "text-blue flex flex-col items-center text-xs" : "text-gray-500 flex flex-col items-center text-xs"}>
                     <IoBagOutline className="text-lg" />Portfolio
                 </NavLink>
-                <NavLink to="/funds" className={({ isActive }) => isActive ? "text-blue-600 flex flex-col items-center text-xs" : "text-gray-500 flex flex-col items-center text-xs"}>
+                <NavLink to="/funds" className={({ isActive }) => isActive ? "text-blue flex flex-col items-center text-xs" : "text-gray-500 flex flex-col items-center text-xs"}>
                     <MdOutlineAccountBalanceWallet className="text-lg" />Funds
                 </NavLink>
             </div>
