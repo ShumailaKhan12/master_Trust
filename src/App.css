@@ -1,13 +1,17 @@
  :root {
-    --text-blue: #0D4582;
-    --light-blue: #318BCA;
-
+   --blue-color: #0D4582;
+   --royal-blue: #0D00E6;
+   --light-blue: #318BCA;
+   --green-color: #3CC89E;
+   --gray-color: #F4F4F4;
+   --purple-color: #7568A0;
+   --red-color: #FB696E;
  }
 
  /* BackGround Colors  Css*/
  .bg-gradient {
- background: linear-gradient(to bottom, #0D4582, #ffffff); 
-  /* background: linear-gradient(to bottom, 
+   background: linear-gradient(to bottom, #0D4582, #ffffff);
+   /* background: linear-gradient(to bottom, 
     #0D4582 0%,   
     #0D4582 20%,  
     #ffffff 100%   
@@ -15,11 +19,27 @@
 
  }
 
- .bg-blue{
-   background-color: var(--text-blue);
+ .bg-blue {
+   background-color: var(--blue-color);
+ }
+
+ .bg-royal-blue {
+   background-color: var(--royal-blue);
  }
 
  /* text Color */
- .text-blue{
-   color: var(--text-blue);
+ .text-blue {
+   color: var(--blue-color);
+ }
+
+ .text-green {
+   color: var(--green-color);
+ }
+
+ .text-red {
+   color: var(--red-color);
+ }
+
+ .text-purple {
+   color: var(--purple-color);
  }
