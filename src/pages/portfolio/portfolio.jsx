@@ -34,11 +34,9 @@ const Portfolio = () => {
     <>
       <div className="">
         <Navbar />
-        <div className="grid grid-cols-12 h-screen grid-rows-5 gap-4 bg-gray-100">
-          <div className="col-span-3 my-20">
+        <div className="flex bg-gray-100">
             <Sidebar />
-          </div>
-          <div className="col-span-9 col-start-4 mt-20 ">
+          <div className="mt-18 space-y-6 w-full">
             <div className="bg-white py-10 rounded-lg ms-5">
               {/* Header Section */}
               <div className="flex items-center justify-around w-full gap-2 max-w-5xl mb-10">

@@ -30,11 +30,9 @@ const FundsPanel = () => {
   return (
     <>
       <Navbar />
-      <div className="grid grid-cols-12 grid-rows-5 gap-4 min-h-screen bg-gray-100">
-        <div className="col-span-3 my-20">
+      <div className="flex min-h-screen bg-gray-100">
           <Sidebar />
-        </div>
-        <div className="col-span-9 col-start-4 mt-15">
+        <div className="space-y-6 w-full mt-18">
           <div className="bg-white rounded-md shadow-sm border border-gray-100 overflow-hidden mx-6 mt-6">
             {/* Header */}
             <div className="p-6 md:p-8 border-b border-gray-200">
