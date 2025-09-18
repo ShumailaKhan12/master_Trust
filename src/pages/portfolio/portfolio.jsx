@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
+import Chart from "../../components/chart";
 
 const Portfolio = () => {
   const stocks = [
@@ -36,20 +37,23 @@ const Portfolio = () => {
         <div className="flex bg-gray-100">
             <Sidebar />
           <div className="mt-18 m-0 lg:ml-110 space-y-6 w-full">
-            <div className="bg-white py-10 rounded-lg ms-5">
+            <div className="bg-white py-10 rounded-lg mx-5">
               {/* Header Section */}
-              <div className="flex items-center justify-around w-full gap-2 max-w-5xl mb-10">
-                <div>
-                  <h2 className="text-xl font-semibold text-gray-800">
+              <div className="flex items-center justify-around w-full px-4 max-w-5xl mb-10">
+                <div className="py-8">
+                  <h2 className="text-xl font-semibold text-gray-800 lg:pt-8">
                     Ready. Set. Invest.
                   </h2>
                   <p className="text-gray-500">
                     Begin your investment <br /> journey today.
                   </p>
                 </div>
-                <div className="flex flex-col items-center">
+
+                <Chart/>
+                
+                {/* <div className="flex flex-col items-center">
                   <div className="relative flex items-center justify-center w-20 h-20 rounded-full bg-teal-50">
-                    <span className="absolute top-2 right-2 text-sm font-semibold text-teal-600">
+                    <span className="absolute top-2 right-2 text-sm font-semibold text-teal-600 border rounded-full px-1">
                       +20%
                     </span>
                     <svg
@@ -62,7 +66,7 @@ const Portfolio = () => {
                       <path d="M10 80 C 40 20, 60 90, 100 40 S 160 80, 190 20" />
                     </svg>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               {/* Top Picks Section */}
