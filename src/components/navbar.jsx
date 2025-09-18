@@ -59,14 +59,14 @@ const Navbar = () => {
                                     />
                                 </div>
                                 <div className='px-3'>
-                                        <p className='text-sm text-gray-400 pt-3 text-left'>Most pinned indices</p>
-                                        {StockData.map((item, index) => (
-                                            <div className='hover:bg-gray-100 border-b border-b-gray-300 py-2' key={index}>
-                                                <p className="cursor-pointer mb-0">{item.name}</p>
-                                                <p className="text-slate-500 text-xs cursor-pointer uppercase flex items-center">{item.title1}<BsDot /> {item.title2}</p>
-                                            </div>
-                                        ))}
-                                    </div>
+                                    <p className='text-sm text-gray-400 pt-3 text-left'>Most pinned indices</p>
+                                    {StockData.map((item, index) => (
+                                        <div className='hover:bg-gray-100 border-b border-b-gray-300 py-2' key={index}>
+                                            <p className="cursor-pointer mb-0">{item.name}</p>
+                                            <p className="text-slate-500 text-xs cursor-pointer uppercase flex items-center">{item.title1}<BsDot /> {item.title2}</p>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         )}
                     </div>
@@ -123,17 +123,19 @@ const Navbar = () => {
             {isProfileOpen && (
                 <div className="fixed inset-0 flex justify-end z-50 pt-20 pr-5">
                     <div className="absolute inset-0" onClick={() => setIsProfileOpen(false)}></div>
-                    <div className="relative w-64 rounded-b-lg bg-white h-40 shadow-lg p-4 flex flex-col z-50">
+                    <div className="relative w-64 rounded-b-lg bg-white h-32 shadow-lg p-4 flex flex-col z-50">
                         <h2 className="text-lg font-semibold mb-4">Hi, Rajik</h2>
-                        <div className="flex items-center">
-                            <LogOut className="bg-gray-200 p-1 rounded-full" />
-                            <button
-                                className="px-2"
-                                onClick={() => setIsProfileOpen(false)}
-                            >
-                                Logout
-                            </button>
-                        </div>
+                        <NavLink to={"/login "}>
+                            <div className="flex items-center hover:bg-red-100 rounded-lg text-red py-2">
+                                <LogOut className="bg-gray-200 p-1 rounded-full" />
+                                <button
+                                    className="px-2"
+                                // onClick={() => setIsProfileOpen(false)}
+                                >
+                                    Logout
+                                </button>
+                            </div>
+                        </NavLink>
                     </div>
                 </div>
             )}
