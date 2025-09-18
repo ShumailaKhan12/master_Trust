@@ -28,7 +28,7 @@ const Home = () => {
                                 <button
                                     key={tab}
                                     onClick={() => setActiveTab(tab)}
-                                    className={`px-6 py-3 text-sm font-medium ${activeTab === tab
+                                    className={`px-10 py-3 text-sm font-medium ${activeTab === tab
                                         ? 'text-blue border-blue'
                                         : 'text-gray-600 hover:text-gray-900'
                                         }`}
@@ -173,10 +173,10 @@ const Home = () => {
 
                             {/* Mutual Funds Content */}
                             {activeTab === "Mutual funds" && (
-                                <div className="flex justify-center items-center h-40">
+                                <div className="flex  flex-col justify-center items-center h-full">
                                     <img src={Bag} alt="bag" />
                                     <p className="text-gray-700 text-lg font-semibold">
-                                        📢 Mutual Funds section under development
+                                        Mutual Funds section under development
                                     </p>
                                 </div>
                             )}
