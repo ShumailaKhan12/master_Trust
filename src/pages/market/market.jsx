@@ -93,7 +93,7 @@ const Market = () => {
             </div>
 
             {/* Tab Navigation */}
-            <div className="border-b border-gray-200">
+            {/* <div className="border-b border-gray-200">
               <div className="px-6">
                 <nav className="flex space-x-8">
                   <button
@@ -118,12 +118,11 @@ const Market = () => {
                   </button>
                 </nav>
               </div>
-            </div>
+            </div> */}
 
             {/* Filters */}
-            <div className="p-6 border-b border-gray-100">
+            {/* <div className="p-6 border-b border-gray-100">
               <div className="flex items-center justify-end space-x-4">
-                {/* Index Selector */}
                 <div className="relative">
                   <button className="flex items-center space-x-2 px-4 py-2 bg-gray-50 border border-gray-200 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100">
                     <span>{selectedIndex}</span>
@@ -131,7 +130,6 @@ const Market = () => {
                   </button>
                 </div>
 
-                {/* Period Selector */}
                 <div className="relative">
                   <button className="flex items-center space-x-2 px-4 py-2 bg-gray-50 border border-gray-200 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100">
                     <span>{selectedPeriod}</span>
@@ -139,7 +137,7 @@ const Market = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Content */}
             <div className="p-6">
@@ -158,7 +156,7 @@ const Market = () => {
                     {topGainers.map((stock, index) => (
                       <div
                         key={stock.symbol}
-                        className="flex items-center justify-between py-2  hover:bg-gray-50    px-2"
+                        className="flex items-center justify-between py-2 mx-1 mb-3 border-b-1 border-slate-200 hover:bg-gray-50    px-2"
                       >
                         <div className="flex-1">
                           <div className="font-medium text-gray-900 text-sm">
@@ -192,7 +190,7 @@ const Market = () => {
                     {topLosers.map((stock, index) => (
                       <div
                         key={stock.symbol}
-                        className="flex items-center justify-between py-2 hover:bg-gray-50 rounded-lg px-2"
+                        className="flex items-center justify-between px-2 py-2 mx-1 mb-3 border-b-1 border-slate-200 hover:bg-gray-50"
                       >
                         <div className="flex-1">
                           <div className="font-medium text-gray-900 text-sm">

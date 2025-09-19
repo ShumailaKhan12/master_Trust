@@ -1,0 +1,29 @@
+{
+    "navbarData": [
+        {
+            "name": "NIFTY",
+            "title1": "NSE",
+            "title2": "NIFTY 50"
+        },
+        {
+            "name": "BANKNIFTY",
+            "title1": "NSE",
+            "title2": "NIFTY Bank"
+        },
+        {
+            "name": "FINNIFTY",
+            "title1": "NSE",
+            "title2": "NIFTY FINANCIAL SERVICES"
+        },
+        {
+            "name": "MIDCPNIFTY",
+            "title1": "NSE",
+            "title2": "NIFTY MIDCAP SELECT"
+        },
+        {
+            "name": "SENSEX",
+            "title1": "BSE",
+            "title2": "S&P BSE SENSEX"
+        }
+    ]
+}
