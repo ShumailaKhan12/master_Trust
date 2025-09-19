@@ -6,18 +6,40 @@ import { GoHomeFill } from 'react-icons/go';
 import { ChevronDown, ChevronUp, LogOut, Search } from 'lucide-react';
 import { BsDot } from 'react-icons/bs';
 import MasterLogo from '../assets/Images/master-logo.png';
-
-const StockData = [
-    { name: "NIFTY", title1: "NSE", title2: "NIFTY 50" },
-    { name: "BANKNIFTY", title1: "NSE", title2: "NIFTY Bank" },
-    { name: "FINNIFTY", title1: "NSE", title2: "NIFTY FINANCIAL SERVICES" },
-    { name: "MIDCPNIFTY", title1: "NSE", title2: "NIFTY MIDCAP SELECT" },
-    { name: "SENSEX", title1: "BSE", title2: "S&P BSE SENSEX" },
-];
+import StockData from '../Data/navbarData.json'
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+    const { navbarData } = StockData
+
+    const [selectedSpots, setSelectedSpots] = useState({
+        spot1: {
+            name: "NIFTY",
+            title1: "NSE",
+            title2: "NIFTY 50",
+            value: "25334.15",
+            change: "+95.05 (+0.38%)",
+        },
+        spot2: {
+            name: "SENSEX",
+            title1: "BSE",
+            title2: "S&P BSE SENSEX",
+            value: "82713.14",
+            change: "+332.45 (+0.40%)",
+        },
+    });
+
+
+
+    const handleAddToSpot = (item, spot) => {
+        setSelectedSpots((prev) => ({
+            ...prev,
+            [spot]: item,
+        }));
+    };
+
 
     return (
         <>
@@ -26,20 +48,28 @@ const Navbar = () => {
 
                 {/* Left Section - NIFTY SENSEX */}
                 <div className="hidden md:flex items-center  space-x-4 lg:space-x-16 border-r border-gray-300 ">
-                    <div className="flex flex-col">
-                        <span className="font-semibold text-sm">NIFTY</span>
-                        <div>
-                            <span className='text-xs font-semibold'>25334.15 </span>
-                            <span className="text-green text-xs">+95.05 (+0.38%)</span>
+                    {selectedSpots.spot1 && (
+                        <div className="flex flex-col">
+                            <span className="font-semibold text-sm">{selectedSpots.spot1.name}</span>
+                            <div>
+                                <span className='text-xs font-semibold'>25334.15 </span>
+                                {/* <span className='text-xs font-semibold'>{selectedSpots.spot1.title1} </span> */}
+                                {/* <span className='text-xs font-semibold'>{selectedSpots.spot1.title2} </span> */}
+                                <span className="text-green text-xs">+95.05 (+0.38%)</span>
+                            </div>
                         </div>
-                    </div>
-                    <div className="flex flex-col">
-                        <span className="font-semibold text-sm ">SENSEX</span>
-                        <div>
-                            <span className='text-xs'>82713.14 </span>
-                            <span className="text-green text-xs">+332.45 (+0.40%)</span>
+                    )}
+                    {selectedSpots.spot2 && (
+                        <div className="flex flex-col">
+                            <span className="font-semibold text-sm">{selectedSpots.spot2.name}</span>
+                            <div>
+                                <span className='text-xs font-semibold'>82713.14 </span>
+                                {/* <span className='text-xs font-semibold'>{selectedSpots.spot2.title1} </span> */}
+                                {/* <span className='text-xs font-semibold'>{selectedSpots.spot2.title2} </span> */}
+                                <span className="text-green text-xs">+332.45 (+0.40%)</span>
+                            </div>
                         </div>
-                    </div>
+                    )}
                     {/* Dropdown */}
                     <div className="relative z-100">
                         <button
@@ -49,22 +79,43 @@ const Navbar = () => {
                             {isDropdownOpen ? <ChevronUp /> : <ChevronDown />}
                         </button>
                         {isDropdownOpen && (
-                            <div className="absolute top-12 right-0 bg-white border border-gray-300 shadow-md rounded-md w-100 py-3">
-                                <div className="relative text-center px-2">
-                                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
+                            <div className="absolute top-13 right-0 bg-white border border-gray-300 shadow-md rounded-md w-100 py-3">
+                                <div className="relative text-center">
+                                    <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
                                     <input
                                         type="text"
                                         placeholder="Search & add"
-                                        className="pl-8 w-full py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="pl-8 w-90 pr-10 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     />
                                 </div>
                                 <div className='px-3'>
                                     <p className='text-sm text-gray-400 pt-3 text-left'>Most pinned indices</p>
-                                    {StockData.map((item, index) => (
-                                        <div className='hover:bg-gray-100 border-b border-b-gray-300 py-2' key={index}>
-                                            <p className="cursor-pointer mb-0">{item.name}</p>
-                                            <p className="text-slate-500 text-xs cursor-pointer uppercase flex items-center">{item.title1}<BsDot /> {item.title2}</p>
+                                    {navbarData.map((item, index) => (
+
+                                        <div className="hover:bg-gray-100 border-b border-b-gray-300 py-2 px-2 flex justify-between items-center group"
+                                            key={index}>
+                                            <div className='hover:bg-gray-100py-2' key={index}>
+                                                <p className="cursor-pointer mb-0">{item.name}</p>
+                                                <p className="text-slate-500 text-xs cursor-pointer uppercase flex items-center">{item.title1}<BsDot /> {item.title2}</p>
+                                            </div>
+
+                                            <div className="hidden group-hover:flex space-x-2">
+                                                <button
+                                                    onClick={() => handleAddToSpot(item, "spot1")}
+                                                    className="bg-gray-100 border border-gray-500 px-3 py-1 rounded-2xl text-xs"
+                                                >
+                                                    Spot 1
+                                                </button>
+                                                <button
+                                                    onClick={() => handleAddToSpot(item, "spot2")}
+                                                    className="bg-gray-100 border border-gray-500 px-3 py-1 rounded-2xl text-xs"
+                                                >
+                                                    Spot 2
+                                                </button>
+                                            </div>
                                         </div>
+
+
                                     ))}
                                 </div>
                             </div>

@@ -41,7 +41,7 @@ const Home = () => {
                             ))}
                         </div>
 
-                        <div className="p-6 shadow-md rounded-b-lg">
+                        <div className="p-6 shadow-md rounded-b-lg ">
                             {activeTab === "Stocks" && (
                                 <>
                                     <div className='block lg:hidden'>
@@ -176,10 +176,9 @@ const Home = () => {
 
 
                             {activeTab === "F&O" && (
-                                <div className="flex flex-col justify-center items-center h-full">
+                                <div className="flex flex-col justify-center items-center min-h-[calc(100vh-200px)]">
                                     <img src={Bag} alt="Bag" />
                                     <p className="text-gray-500 text-lg font-semibold">
-                                        {/* 🚧 Coming Soon 🚧 */}
                                         Your positions will appear here.
                                     </p>
                                 </div>
@@ -187,9 +186,9 @@ const Home = () => {
 
                             {/* Mutual Funds Content */}
                             {activeTab === "Mutual funds" && (
-                                <div className="flex  flex-col justify-center items-center h-full">
+                                <div className="flex  flex-col justify-center items-center min-h-[calc(100vh-200px)]">
                                     <img src={Bag} alt="bag" />
-                                    <p className="text-gray-700 text-lg font-semibold">
+                                    <p className="text-gray-500 text-lg font-semibold">
                                         Mutual Funds section under development
                                     </p>
                                 </div>
