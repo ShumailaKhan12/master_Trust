@@ -80,7 +80,7 @@
   ],
 
 
-  
+
   "investingTools": [
     {
       "name": "Screeners",
@@ -113,7 +113,7 @@
   "marketUpdates": [
     {
       "name": "Live news",
-      "icon": "/images/home/live.png"
+      "icon": "/images/home/Live.png"
     }
   ]
 }
