@@ -99,7 +99,7 @@ const Home = () => {
                                             {investingTools.map((tool, index) => (
                                                 <div key={index} className="p-3 border bg-white flex items-center border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer relative">
                                                     {tool.badge && (
-                                                        <span className="absolute top-2 right-2 px-2 py-1 text-xs font-bold bg-orange-600 text-white rounded"> {tool.badge} </span>)}
+                                                        <span className="absolute -top-2 right-2 px-2 py-1 text-xs font-bold bg-blue text-white rounded"> {tool.badge} </span>)}
                                                     <div className="flex items-center">
                                                         <img src={tool.icon} className='h-8 w-8 me-3' alt="loading" />
                                                         <h4 className="font-medium text-gray-900">{tool.name}</h4>
