@@ -110,7 +110,7 @@ const FundsPanel = () => {
           </div>
 
           {/* Footer action */}
-          <div className="px-3 py-5 bg-white border-b border-gray-100 rounded-md shadow-sm border mx-6">
+          <div className="px-3 py-5 mb-3 bg-white border-b border-gray-100 rounded-md shadow-sm border mx-6">
             <div className="text-center text-blue font-medium">
               Pledge for margin/unpledge{" "}
               <span className="inline-block ml-2">↗</span>

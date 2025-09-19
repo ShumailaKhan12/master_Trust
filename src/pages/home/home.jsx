@@ -23,7 +23,7 @@ const Home = () => {
             <Navbar />
             <div className="flex bg-gray-100">
                 <Sidebar />
-                <div className="p-4 space-y-6 pt-16 w-full my-2 mt-5 lg:mt-2 lg:ml-110">
+                <div className="px-4 space-y-6 pt-16 w-full lg:my-0 mt-5 lg:mt-2 lg:ml-110">
                     {/* Tabs */}
                     <div className="rounded-lg">
                         <div className="flex shadow-md bg-white rounded-tl-lg rounded-tr-lg">
