@@ -86,9 +86,9 @@ const Home = () => {
                                                         </span>
                                                     )}
                                                     <div className="flex justify-between items-center">
-                                                        <h4 className="font-medium text-gray-900 p-3">{product.name}</h4>
-                                                        <div className={`${iconBgColors[index % iconBgColors.length]} rounded-l-4xl p-3`}>
-                                                            <img src={product?.icon} className='h-12 w-10' alt={product?.name} />
+                                                        <h4 className="font-medium text-gray-900 py-5 px-3">{product.name}</h4>
+                                                        <div className={`${iconBgColors[index % iconBgColors.length]} rounded-l-4xl p-5 flex items-center`}>
+                                                            <img src={product?.icon} className='h-8 w-8' alt={product?.name} />
                                                         </div>
                                                     </div>
                                                 </div>
