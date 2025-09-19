@@ -13,7 +13,7 @@ const Navbar = () => {
     const [isProfileOpen, setIsProfileOpen] = useState(false);
 
     const { navbarData } = StockData
-
+    const [activeSpot, setActiveSpot] = useState(null);
     const [selectedSpots, setSelectedSpots] = useState({
         spot1: {
             name: "NIFTY",
@@ -38,6 +38,8 @@ const Navbar = () => {
             ...prev,
             [spot]: item,
         }));
+        setActiveSpot(spot);
+
     };
 
 
@@ -102,13 +104,13 @@ const Navbar = () => {
                                             <div className="hidden group-hover:flex space-x-2">
                                                 <button
                                                     onClick={() => handleAddToSpot(item, "spot1")}
-                                                    className="bg-gray-100 border border-gray-500 px-3 py-1 rounded-2xl text-xs"
+                                                    className={`px-3 py-1 rounded-2xl text-xs border ${selectedSpots.spot1?.name === item.name && activeSpot === "spot1" ? "bg-blue text-white border-blue" : "bg-gray-100 border-gray-500"}`}
                                                 >
                                                     Spot 1
                                                 </button>
                                                 <button
                                                     onClick={() => handleAddToSpot(item, "spot2")}
-                                                    className="bg-gray-100 border border-gray-500 px-3 py-1 rounded-2xl text-xs"
+                                                    className={`px-3 py-1 rounded-2xl text-xs border ${selectedSpots.spot2?.name === item.name && activeSpot === "spot2" ? "bg-blue text-white border-blue" : "bg-gray-100 border-gray-500"}`}
                                                 >
                                                     Spot 2
                                                 </button>
