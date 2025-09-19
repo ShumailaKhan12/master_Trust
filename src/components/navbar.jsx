@@ -49,7 +49,7 @@ const Navbar = () => {
                             {isDropdownOpen ? <ChevronUp /> : <ChevronDown />}
                         </button>
                         {isDropdownOpen && (
-                            <div className="absolute top-12 right-0 bg-white border border-gray-300 shadow-md rounded-md w-64 py-3">
+                            <div className="absolute top-12 right-0 bg-white border border-gray-300 shadow-md rounded-md w-100 py-3">
                                 <div className="relative text-center px-2">
                                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
                                     <input

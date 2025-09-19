@@ -21,17 +21,17 @@ const Home = () => {
     return (
         <div>
             <Navbar />
-            <div className="flex bg-gray-100 ">
+            <div className="flex bg-gray-100">
                 <Sidebar />
                 <div className="p-4 space-y-6 pt-16 w-full my-2 mt-5 lg:mt-2 lg:ml-110">
                     {/* Tabs */}
-                    <div className=" rounded-lg">
+                    <div className="rounded-lg">
                         <div className="flex shadow-md bg-white rounded-tl-lg rounded-tr-lg">
                             {['Stocks', 'F&O', 'Mutual funds'].map((tab) => (
                                 <button
                                     key={tab}
                                     onClick={() => setActiveTab(tab)}
-                                    className={`px-15 py-3 text-sm font-medium ${activeTab === tab
+                                    className={`px-5 md:px-15 py-3 text-sm font-medium ${activeTab === tab
                                         ? 'text-blue border-blue'
                                         : 'text-gray-600 hover:text-gray-900'
                                         }`}
@@ -48,7 +48,7 @@ const Home = () => {
                                         <MobileSidebar />
                                     </div>
                                     {/* Most bought on Kotak */}
-                                    <div className=" w-full"> 
+                                    <div className=" w-full">
                                         <h3 className="text-lg font-semibold text-gray-400 mb-2">Most bought on Kotak</h3>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
                                             {mostBoughtStocks?.map((stock, index) => (
