@@ -24,7 +24,7 @@ const MarketMovers = () => {
         </div>
 
         {/* Tab Navigation */}
-        <div className="border-b border-gray-200">
+        {/* <div className="border-b border-gray-200">
           <div className="px-6">
             <nav className="flex space-x-8">
               <button
@@ -47,12 +47,12 @@ const MarketMovers = () => {
               </button>
             </nav>
           </div>
-        </div>
+        </div> */}
 
         {/* Filters */}
-        <div className="p-6 border-b border-gray-100">
+        {/* <div className="p-6 border-b border-gray-100">
           <div className="flex items-center justify-end space-x-4">
-            {/* Index Selector */}
+            
             <div className="relative">
               <button className="flex items-center space-x-2 px-4 py-2 bg-gray-50 border border-gray-200 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100">
                 <span>{selectedIndex}</span>
@@ -60,7 +60,6 @@ const MarketMovers = () => {
               </button>
             </div>
 
-            {/* Period Selector */}
             <div className="relative">
               <button className="flex items-center space-x-2 px-4 py-2 bg-gray-50 border border-gray-200 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100">
                 <span>{selectedPeriod}</span>
@@ -68,13 +67,13 @@ const MarketMovers = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Content */}
-        <div className="p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-1 xl:grid-cols-2 gap-8 ">
+        <div className="py-6">
+          <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-1 xl:grid-cols-2 ">
             {/* Top Gainers */}
-            <div className=' '>
+            <div className=' pl-6 pr-3'>
               <div className="flex items-center space-x-2 mb-4 ">
                 <h3 className="text-lg font-medium text-gray-800">Top gainers</h3>
                 <span className="bg-green-100 text-green text-xs font-medium px-2 py-1 rounded-full">
@@ -83,7 +82,7 @@ const MarketMovers = () => {
               </div>
               <div className="space-y-3 grid  grid-cols-1 lg:grid-cols-2">
                 {topGainers.map((stock, index) => (
-                  <div key={stock.symbol} className="flex items-center justify-between py-2  hover:bg-gray-50    px-2">
+                  <div key={stock.symbol} className="flex items-center justify-between mx-1 py-2 border-b-1 border-slate-200 hover:bg-gray-50 mb-3 px-2">
                     <div className="flex-1">
                       <div className="font-medium text-gray-800 text-sm">{stock.symbol}</div>
                     </div>
@@ -98,9 +97,10 @@ const MarketMovers = () => {
 
               </div>
             </div>
+            {/* <div className='border-r-1 border-slate-300'></div> */}
 
             {/* Top Losers */}
-            <div>
+            <div className='pl-3 pr-6'>
               <div className="flex items-center space-x-2 mb-4 ">
                 <h3 className="text-lg font-medium text-gray-800">Top losers</h3>
                 <span className="bg-red-100 text-red text-xs font-medium px-2 py-1 rounded-full">
@@ -109,7 +109,7 @@ const MarketMovers = () => {
               </div>
               <div className="space-y-3 grid  grid-cols-1 lg:grid-cols-2">
                 {topLosers.map((stock, index) => (
-                  <div key={stock.symbol} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded-lg px-2">
+                  <div key={stock.symbol} className="flex items-center justify-between border-b-1 border-slate-200 mb-3 mx-1 py-2 hover:bg-gray-50  px-2">
                     <div className="flex-1">
                       <div className="font-medium text-gray-800 text-sm">{stock.symbol}</div>
                     </div>
@@ -126,7 +126,7 @@ const MarketMovers = () => {
           </div>
 
         {/* View All Button */}
-        <div className="mt-6 pt-4 border-t border-gray-100">
+        <div className="mt-6 pt-4 px-6 border-t border-gray-100">
           <NavLink to="/market" className="flex items-center space-x-1 text-blue hover:text-blue-700 font-medium text-sm">
             <span>View all</span>
             <ChevronRight className="w-4 h-4" />
