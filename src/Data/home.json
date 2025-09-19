@@ -57,25 +57,24 @@
   "investmentProducts": [
     {
       "name": "Mutual funds",
-      "icon": "💰",
+      "icon": "/images/home/rupee.png",
       "badge": "LIVE NOW",
       "color": "bg-green-100"
     },
     {
       "name": "IPO",
-      "icon": "📈",
+      "icon": "/images/home/advertisement.png",
       "badge": "LIVE",
       "color": "bg-blue-100"
     },
     {
       "name": "Stockcase",
-      "icon": "🧳",
+      "icon": "/images/home/stockCase.png",
       "color": "bg-purple-100"
     },
     {
       "name": "SipIt",
-      "icon": "💧",
-      "badge": "NEW",
+      "icon": "/images/home/sipit.png",
       "color": "bg-orange-100"
     }
   ],

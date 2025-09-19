@@ -14,7 +14,7 @@ const Home = () => {
 
     const [activeTab, setActiveTab] = useState('Stocks');
 
-
+    const iconBgColors = ["bg-green-transparent", "bg-purple-transparent", "bg-red-transparent", "bg-blue-transparent"];
 
     const { mostBoughtStocks, payLaterStocks, investmentProducts, investingTools, researchTools, marketUpdates } = Data
 
@@ -52,7 +52,7 @@ const Home = () => {
                                         <h3 className="text-lg font-semibold text-gray-400 mb-2">Most bought on Kotak</h3>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
                                             {mostBoughtStocks?.map((stock, index) => (
-                                                <div key={index} className="p-4 border border-gray-200 bg-white rounded-lg hover:shadow-md transition-shadow cursor-pointer">
+                                                <div key={index} className="p-4 border bg-white rounded-lg shadow-sm border-gray-200 transition-shadow">
                                                     <div className='flex'>
                                                         <div className='bg-gray-100 rounded-full h-10 w-10 me-3 flex items-center justify-center p-1'>
                                                             <img src={stock?.img} className='w-full h-full rounded-full' alt={stock?.name} />
@@ -76,17 +76,21 @@ const Home = () => {
                                         <h3 className="text-lg font-semibold text-gray-400 mb-2 pt-4">Investment products</h3>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                                             {investmentProducts.map((product, index) => (
-                                                <div key={index} className={`p-4 bg-white ${product.color} rounded-lg hover:shadow-md transition-shadow cursor-pointer relative`}>
+                                                <div key={index} className={`bg-white ${product.color} rounded-lg shadow-md shadow-slate-300 transition-shadow relative`}>
                                                     {product.badge && (
-                                                        <span className={`absolute top-2 right-2 px-2 py-1 text-xs font-bold rounded ${product.badge === 'LIVE NOW' ? 'bg-green-600 text-white' :
-                                                            product.badge === 'LIVE' ? 'bg-blue text-white' :
+                                                        <span className={`absolute -top-3 right-0 px-2 py-1 text-xs font-medium rounded ${product.badge === 'LIVE NOW' ? 'bg-green-600 text-white' :
+                                                            product.badge === 'LIVE' ? 'bg-blue-700 text-white' :
                                                                 'bg-orange-600 text-white'
                                                             }`}>
                                                             {product.badge}
                                                         </span>
                                                     )}
-                                                    <div className="text-2xl mb-2">{product.icon}</div>
-                                                    <h4 className="font-medium text-gray-900">{product.name}</h4>
+                                                    <div className="flex justify-between items-center">
+                                                        <h4 className="font-medium text-gray-900 p-3">{product.name}</h4>
+                                                        <div className={`${iconBgColors[index % iconBgColors.length]} rounded-l-4xl p-3`}>
+                                                            <img src={product?.icon} className='h-12 w-10' alt={product?.name} />
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             ))}
                                         </div>
@@ -97,7 +101,7 @@ const Home = () => {
                                         <h3 className="text-lg font-semibold text-gray-400 mb-2 pt-4">Investing tools</h3>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                                             {investingTools.map((tool, index) => (
-                                                <div key={index} className="p-3 border bg-white flex items-center border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer relative">
+                                                <div key={index} className="p-3 border bg-white flex items-center border-gray-200 rounded-lg transition-shadow relative">
                                                     {tool.badge && (
                                                         <span className="absolute top-2 right-2 px-2 py-1 text-xs font-bold bg-orange-600 text-white rounded"> {tool.badge} </span>)}
                                                     <div className="flex items-center">
@@ -115,7 +119,7 @@ const Home = () => {
                                             <h3 className="text-lg font-semibold text-gray-400 mb-2 pt-4">Research</h3>
                                             <div className="space-y-3 bg0">
                                                 {researchTools?.map((tool, index) => (
-                                                    <div key={index} className="flex items-center space-x-3 p-3 border bg-white border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer">
+                                                    <div key={index} className="flex items-center space-x-3 p-3 border bg-white border-gray-200 rounded-lg transition-shadow">
                                                         <div className="flex items-center">
                                                             <img src={tool?.icon} className='h-10 w-12 me-3' alt="Laoding" />
 
@@ -129,7 +133,7 @@ const Home = () => {
                                             <h3 className="text-lg font-semibold text-gray-400 mb-2 pt-4">Market updates</h3>
                                             <div className="space-y-3">
                                                 {marketUpdates.map((update, index) => (
-                                                    <div key={index} className="flex items-center space-x-3 p-3 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer">
+                                                    <div key={index} className="flex items-center space-x-3 p-3 bg-white border border-gray-200 rounded-lg transition-shadow">
                                                         <div className="flex items-center">
                                                             <img src={update?.icon} className='h-10 w-12 me-3' alt="Loading" />
                                                             <h4 className="font-medium text-gray-900">{update.name}</h4>
@@ -151,7 +155,7 @@ const Home = () => {
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4">
                                             {payLaterStocks.map((stock, index) => (
-                                                <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                                <div key={index} className="border border-gray-200 rounded-lg p-4 shadow-md transition-shadow">
                                                     <div className="flex justify-between items-start mb-2">
                                                         <h4 className="font-medium text-gray-900">{stock.name}</h4>
                                                         <button className="px-2 py-1 text-xs font-semibold bg-blue text-white rounded hover:bg-blue transition-colors">

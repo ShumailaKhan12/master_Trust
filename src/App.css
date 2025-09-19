@@ -1,5 +1,3 @@
- 
- 
  :root {
    --blue-color: #0D4582;
    --royal-blue: #0D00E6;
@@ -28,6 +26,25 @@
  .bg-royal-blue {
    background-color: var(--royal-blue);
  }
+ .bg-green{
+  background-color: var(--green-color);
+ }
+
+ .bg-blue-transparent {
+   background-color: rgba(13, 69, 130, 0.1);
+ }
+
+ .bg-green-transparent {
+   background-color: rgba(60, 200, 158, 0.2);
+ }
+
+ .bg-red-transparent {
+   background-color: rgba(251, 105, 110, 0.1);
+ }
+
+ .bg-purple-transparent {
+   background-color: rgba(117, 104, 160, 0.2);
+ }
 
  /* text Color */
  .text-blue {
@@ -47,6 +64,6 @@
  }
 
  /* Border Css */
- .border-blue{
-  border-bottom: 2px solid var(--blue-color);
+ .border-blue {
+   border-bottom: 2px solid var(--blue-color);
  }
